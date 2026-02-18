@@ -1,402 +1,218 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" dir="ltr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palette | The Creative Ecosystem</title>
+    <title>Palette | Premium Art Supplies E-Commerce</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
-        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Libraries -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Core CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
 
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-glass">
+    <header class="header">
         <div class="container">
-            <!-- Left: Brand -->
-            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-                    style="width: 40px; height: 40px;">
-                    <i class="bi bi-palette-fill fs-5"></i>
-                </div>
-                <span class="font-heading fs-4 fw-bold">Palette</span>
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="bi bi-palette-fill"></i></div>
+                <span>Palette</span>
             </a>
 
-            <!-- Right: Utility & Toggle -->
-            <div class="d-flex align-items-center gap-3 order-lg-3">
-                <!-- Theme Toggle -->
-                <button class="theme-toggle-btn"><i class="bi bi-moon-fill"></i></button>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Home 1</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="tutorials.html" class="nav-link">Tutorials</a>
+                <a href="artists.html" class="nav-link">Artists</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
 
-                <!-- Cart -->
-                <a href="cart.html" class="position-relative text-heading fs-5">
-                    <i class="bi bi-bag"></i>
-                    <span
-                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-light p-1"
-                        style="font-size: 0.5rem;">2</span>
-                </a>
-
-                <!-- Desktop Actions -->
-                <div class="d-none d-md-flex gap-2">
-                    <a href="login.html" class="btn btn-outline-creative btn-sm">Log In</a>
-                    <a href="register.html" class="btn btn-primary-creative btn-sm">Sign Up</a>
-                    <a href="dashboard.html" class="btn btn-outline-creative btn-sm"><i
-                            class="bi bi-person-circle"></i></a>
-                </div>
-
-                <!-- Mobile Toggler -->
-                <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-
-            <!-- Center: Navigation (Offcanvas on Mobile) -->
-            <div class="offcanvas offcanvas-start" id="offcanvasNavbar">
-                <div class="offcanvas-header border-bottom">
-                    <h5 class="offcanvas-title font-heading fw-bold">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <!-- Mobile: Dashboard First -->
-                    <div class="d-md-none mb-4">
-                        <a href="dashboard.html" class="btn btn-primary-creative w-100 mb-2">
-                            <i class="bi bi-grid-fill me-2"></i>My Dashboard
-                        </a>
-                    </div>
-
-                    <!-- Main Links -->
-                    <ul class="navbar-nav mx-auto fw-medium">
-                        <li class="nav-item"><a class="nav-link" href="shop.html">Store</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tutorials.html">Academy</a></li>
-                        <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
-                    </ul>
-
-                    <!-- Mobile: Auth -->
-                    <div class="d-md-none mt-4 d-flex flex-column gap-2">
-                        <a href="login.html" class="btn btn-outline-creative w-100">Log In</a>
-                        <a href="register.html" class="btn btn-primary-creative w-100">Sign Up</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero-section">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <div
-                        class="d-inline-block px-3 py-1 rounded-pill bg-primary bg-opacity-10 text-primary small fw-bold mb-3 ls-1">
-                        THE ARTIST'S ECOSYSTEM
-                    </div>
-                    <h1 class="display-3 font-heading fw-bold mb-4 lh-sm">
-                        Everything an Artist <br> Needs in <span class="text-gradient">One Place</span>
-                    </h1>
-                    <p class="lead text-muted mb-5" style="max-width: 500px;">
-                        Shop premium supplies, master new techniques with our Academy, and connect with a global
-                        community of creators.
-                    </p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="shop.html" class="btn btn-primary-creative btn-lg">Shop Supplies</a>
-                        <a href="home-2.html" class="btn btn-outline-creative btn-lg"><i
-                                class="bi bi-play-circle me-2"></i> Explore Academy</a>
-                    </div>
-                    <div class="d-flex align-items-center gap-4 mt-5 pt-4 border-top border-opacity-10"
-                        style="border-color: var(--text-muted) !important;">
-                        <div>
-                            <h4 class="mb-0 font-heading">12k+</h4>
-                            <small class="text-muted">Products</small>
-                        </div>
-                        <div class="vr opacity-25"></div>
-                        <div>
-                            <h4 class="mb-0 font-heading">500+</h4>
-                            <small class="text-muted">Tutorials</small>
-                        </div>
-                        <div class="vr opacity-25"></div>
-                        <div>
-                            <h4 class="mb-0 font-heading">4.9/5</h4>
-                            <small class="text-muted">Rating</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="position-relative">
-                        <div class="card-creative border-0 shadow-none bg-transparent">
-                            <!-- Abstract geometric composition placeholder -->
-                            <div class="ratio ratio-1x1 rounded- circle bg-gradient opacity-10"
-                                style="background: var(--gradient-primary); filter: blur(100px); position: absolute; z-index: -1;">
-                            </div>
-                            <img src="https://placehold.co/600x600/f1f5f9/6366f1?text=Artistic+Composition"
-                                alt="Art Supplies" class="img-fluid rounded-4 shadow-lg position-relative"
-                                style="z-index: 1;">
-
-                            <!-- Floating Elements -->
-                            <div class="position-absolute top-0 end-0 mt-4 me-4 bg-surface p-3 rounded-4 shadow-lg animate-float"
-                                style="z-index: 2; max-width: 200px;">
-                                <div class="d-flex gap-2 align-items-center mb-2">
-                                    <div
-                                        class="avatar bg-warning bg-opacity-10 text-warning d-flex align-items-center justify-content-center border-0">
-                                        <i class="bi bi-star-fill"></i>
-                                    </div>
-                                    <div>
-                                        <small class="d-block text-muted lh-1">Top Rated</small>
-                                        <span class="fw-bold fs-6">Pro Brush Set</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="header-actions">
+                <button id="themeToggle" class="btn btn-outline btn-sm"><i class="bi bi-moon-stars"></i></button>
+                <button onclick="openModal('loginModal')" class="btn btn-outline btn-sm">Login</button>
+                <button onclick="openModal('signupModal')" class="btn btn-primary btn-sm">Sign Up</button>
+                <a href="dashboard.html" class="btn btn-primary btn-sm"><i class="bi bi-grid-fill"></i></a>
+                <div class="mobile-toggle"><i class="bi bi-list"></i></div>
             </div>
         </div>
     </header>
 
-    <!-- Categories -->
-    <section class="section-padding pt-0">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-end mb-5">
-                <div>
-                    <h2 class="mb-1">Shop by Category</h2>
-                    <p class="text-muted mb-0">Find the perfect tools for your medium.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container grid grid-2">
+            <div class="hero-content" data-animate="fade-up">
+                <span class="hero-tag">Premium Collection 2026</span>
+                <h1>Unleash Your <br><span style="color: var(--primary)">Creative Spirit</span></h1>
+                <p>Discover professional-grade tools, master new techniques, and join a thriving community of artists
+                    from around the world.</p>
+                <div class="hero-btns">
+                    <a href="shop.html" class="btn btn-primary">Shop Collection <i class="bi bi-arrow-right"></i></a>
+                    <a href="tutorials.html" class="btn btn-outline">Start Learning</a>
                 </div>
-                <a href="shop.html" class="text-primary fw-bold">View All <i class="bi bi-arrow-right"></i></a>
             </div>
-
-            <div class="row g-4 justify-content-center">
-                <div class="col-6 col-md-4 col-lg-2">
-                    <a href="#"
-                        class="card-creative d-block text-center p-4 text-decoration-none h-100 d-flex flex-column align-items-center justify-content-center">
-                        <div class="mb-3 text-secondary fs-1"><i class="bi bi-brush"></i></div>
-                        <h6 class="mb-0">Painting</h6>
-                    </a>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <a href="#"
-                        class="card-creative d-block text-center p-4 text-decoration-none h-100 d-flex flex-column align-items-center justify-content-center">
-                        <div class="mb-3 text-primary fs-1"><i class="bi bi-pencil-fill"></i></div>
-                        <h6 class="mb-0">Drawing</h6>
-                    </a>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <a href="#"
-                        class="card-creative d-block text-center p-4 text-decoration-none h-100 d-flex flex-column align-items-center justify-content-center">
-                        <div class="mb-3 text-warning fs-1"><i class="bi bi-tablet"></i></div>
-                        <h6 class="mb-0">Digital Art</h6>
-                    </a>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <a href="#"
-                        class="card-creative d-block text-center p-4 text-decoration-none h-100 d-flex flex-column align-items-center justify-content-center">
-                        <div class="mb-3 text-accent fs-1"><i class="bi bi-scissors"></i></div>
-                        <h6 class="mb-0">Crafting</h6>
-                    </a>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <a href="#"
-                        class="card-creative d-block text-center p-4 text-decoration-none h-100 d-flex flex-column align-items-center justify-content-center">
-                        <div class="mb-3 text-info fs-1"><i class="bi bi-palette"></i></div>
-                        <h6 class="mb-0">Accessories</h6>
-                    </a>
-                </div>
+            <div class="hero-image" data-animate="fade-in">
+                <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=800"
+                    alt="Art Supplies Hero">
             </div>
         </div>
     </section>
 
-    <!-- Seasonal Collection (New) -->
-    <section class="section-padding py-0">
+    <!-- Featured Art Supplies -->
+    <section class="section">
         <div class="container">
-            <div class="card-creative border-0 overflow-hidden bg-primary text-white position-relative">
-                <div class="position-absolute top-0 start-0 w-100 h-100"
-                    style="background: url('https://placehold.co/1200x400/1e293b/4f46e5?text=Autumn+Palette') center/cover; opacity: 0.4;">
-                </div>
-                <div class="position-relative z-1 p-5 text-center text-md-start">
-                    <div class="row align-items-center">
-                        <div class="col-md-8">
-                            <span class="badge bg-warning text-dark mb-2">Limited Edition</span>
-                            <h2 class="display-5 font-heading fw-bold mb-3">The Autumn Collection 🍂</h2>
-                            <p class="lead opacity-90 mb-4">Warm earth tones, heavy-body acrylics, and textured canvas.
-                                Everything you need to capture the season.</p>
-                            <a href="shop.html" class="btn btn-light text-primary fw-bold">Explore Collection</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-header" data-animate="fade-up">
+                <h2>Featured Art Supplies</h2>
+                <p>Curated tools for professional results. Hand-picked by our master artists.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Services Section (New) -->
-    <section class="section-padding bg-surface">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="mb-2 font-heading fw-bold">More Than a Store</h2>
-                <p class="text-muted">Professional services to support your artistic journey.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card-creative p-4 text-center h-100 border-0 shadow-sm">
-                        <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex p-3 mb-3 fs-3">
-                            <i class="bi bi-aspect-ratio"></i>
+            <div class="grid grid-3">
+                <!-- Card 1 -->
+                <div class="card product-card" data-animate="fade-up">
+                    <div class="wishlist-btn"><i class="bi bi-heart"></i></div>
+                    <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&q=80&w=400"
+                        alt="Oil Paints" class="product-img">
+                    <div class="product-info">
+                        <span class="product-cat">Paints</span>
+                        <h3 class="product-title">Master Class Oil Set</h3>
+                        <div class="product-footer">
+                            <span class="price">$129.99</span>
+                            <button class="btn btn-primary btn-sm">Add to Cart</button>
                         </div>
-                        <h5 class="fw-bold">Custom Framing</h5>
-                        <p class="text-muted small">Museum-quality framing with UV-protective glass and acid-free mats.
-                            Handcrafted in-house.</p>
-                        <a href="#" class="text-primary fw-bold small">Get a Quote <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card-creative p-4 text-center h-100 border-0 shadow-sm">
-                        <div
-                            class="bg-secondary bg-opacity-10 text-secondary rounded-circle d-inline-flex p-3 mb-3 fs-3">
-                            <i class="bi bi-building"></i>
+                <!-- Card 2 -->
+                <div class="card product-card" data-animate="fade-up">
+                    <div class="wishlist-btn"><i class="bi bi-heart-fill" style="color: var(--accent)"></i></div>
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=400"
+                        alt="Brushes" class="product-img">
+                    <div class="product-info">
+                        <span class="product-cat">Brushes</span>
+                        <h3 class="product-title">Sable Detailer Pro</h3>
+                        <div class="product-footer">
+                            <span class="price">$45.00</span>
+                            <button class="btn btn-primary btn-sm">Add to Cart</button>
                         </div>
-                        <h5 class="fw-bold">Studio Rental</h5>
-                        <p class="text-muted small">Private and shared studio spaces available by the hour or month.
-                            Natural north light included.</p>
-                        <a href="#" class="text-secondary fw-bold small">Book Space <i
-                                class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card-creative p-4 text-center h-100 border-0 shadow-sm">
-                        <div class="bg-accent bg-opacity-10 text-accent rounded-circle d-inline-flex p-3 mb-3 fs-3">
-                            <i class="bi bi-camera"></i>
+                <!-- Card 3 -->
+                <div class="card product-card" data-animate="fade-up">
+                    <div class="wishlist-btn"><i class="bi bi-heart"></i></div>
+                    <img src="https://images.unsplash.com/photo-1520406596245-4add8679f291?auto=format&fit=crop&q=80&w=400"
+                        alt="Canvas" class="product-img">
+                    <div class="product-info">
+                        <span class="product-cat">Canvas</span>
+                        <h3 class="product-title">Linen Stretched 24x36</h3>
+                        <div class="product-footer">
+                            <span class="price">$89.00</span>
+                            <button class="btn btn-primary btn-sm">Add to Cart</button>
                         </div>
-                        <h5 class="fw-bold">Equipment Leasing</h5>
-                        <p class="text-muted small">Rent high-end easels, lighting, and digital tools for specific
-                            projects without the upfront cost.</p>
-                        <a href="#" class="text-accent fw-bold small">View Inventory <i
-                                class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Artist Picks (Using Featured Products structure) -->
-    <section class="section-padding">
+    <!-- Categories Section -->
+    <section class="section" style="background: var(--bg-surface)">
         <div class="container">
-            <h2 class="text-center mb-5 font-heading fw-bold">Featured Artists' Picks</h2>
-            <div class="row g-4">
+            <div class="section-header" data-animate="fade-up">
+                <h2>Shop by Category</h2>
+                <p>Everything you need for your chosen medium.</p>
+            </div>
+
+            <div class="grid grid-5">
+                <a href="shop.html?cat=paint" class="card text-center" data-animate="fade-up">
+                    <i class="bi bi-palette"
+                        style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; display: block;"></i>
+                    <h4>Paints</h4>
+                </a>
+                <a href="shop.html?cat=brushes" class="card text-center" data-animate="fade-up">
+                    <i class="bi bi-brush"
+                        style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 15px; display: block;"></i>
+                    <h4>Brushes</h4>
+                </a>
+                <a href="shop.html?cat=canvas" class="card text-center" data-animate="fade-up">
+                    <i class="bi bi-layers"
+                        style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px; display: block;"></i>
+                    <h4>Canvas</h4>
+                </a>
+                <a href="shop.html?cat=sketch" class="card text-center" data-animate="fade-up">
+                    <i class="bi bi-pencil"
+                        style="font-size: 2.5rem; color: var(--warning); margin-bottom: 15px; display: block;"></i>
+                    <h4>Sketching</h4>
+                </a>
+                <a href="shop.html?cat=digital" class="card text-center" data-animate="fade-up">
+                    <i class="bi bi-tablet"
+                        style="font-size: 2.5rem; color: var(--success); margin-bottom: 15px; display: block;"></i>
+                    <h4>Digital Art</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <h2>Our Best Sellers</h2>
+                <p>Most popular tools loved by our community.</p>
+            </div>
+
+            <div class="grid grid-4">
                 <!-- Product 1 -->
-                <div class="col-md-3">
-                    <div class="card-creative">
-                        <div class="card-img-wrapper">
-                            <span class="position-absolute top-0 start-0 m-3 badge bg-accent">Hot</span>
-                            <img src="https://placehold.co/400x400/e2e8f0/64748b?text=Golden+Acrylics" alt="Product">
-                            <div
-                                class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-to-t from-black opacity-0 hover-show">
-                            </div>
-                        </div>
-                        <div class="p-3">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <div>
-                                    <small class="text-muted d-block mb-1">Paints</small>
-                                    <h6 class="mb-0 fw-bold"><a href="product.html" class="text-heading">Golden
-                                            Heavy Body</a></h6>
-                                </div>
-                                <span class="fw-bold text-primary">$34.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2 mb-3 pt-2 border-top border-opacity-10"
-                                style="border-color: var(--border-color) !important;">
-                                <img src="https://placehold.co/30x30/334155/fff" class="rounded-circle"
-                                    style="width:24px;height:24px;">
-                                <small class="text-muted" style="font-size: 0.75rem;">Picked by <strong>Leo
-                                        Li</strong></small>
-                            </div>
-                            <button class="btn btn-outline-creative w-100 btn-sm">Add to Cart</button>
+                <div class="card product-card" data-animate="fade-up">
+                    <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&q=80&w=300"
+                        alt="Product" class="product-img">
+                    <div class="product-info">
+                        <span class="product-cat">Paints</span>
+                        <h3 class="product-title">Heavy Body Acrylics</h3>
+                        <div class="product-footer">
+                            <span class="price">$15.99</span>
+                            <button class="btn btn-primary btn-sm"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
                 </div>
                 <!-- Product 2 -->
-                <div class="col-md-3">
-                    <div class="card-creative">
-                        <div class="card-img-wrapper">
-                            <img src="https://placehold.co/400x400/e2e8f0/64748b?text=Arches+Paper" alt="Product">
-                        </div>
-                        <div class="p-3">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <div>
-                                    <small class="text-muted d-block mb-1">Paper</small>
-                                    <h6 class="mb-0 fw-bold"><a href="product.html" class="text-heading">Arches
-                                            Watercolor Block</a></h6>
-                                </div>
-                                <span class="fw-bold text-primary">$65.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2 mb-3 pt-2 border-top border-opacity-10"
-                                style="border-color: var(--border-color) !important;">
-                                <img src="https://placehold.co/30x30/475569/fff" class="rounded-circle"
-                                    style="width:24px;height:24px;">
-                                <small class="text-muted" style="font-size: 0.75rem;">Picked by <strong>Sarah
-                                        J.</strong></small>
-                            </div>
-                            <button class="btn btn-outline-creative w-100 btn-sm">Add to Cart</button>
+                <div class="card product-card" data-animate="fade-up">
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=300"
+                        alt="Product" class="product-img">
+                    <div class="product-info">
+                        <span class="product-cat">Sketching</span>
+                        <h3 class="product-title">Graphite Pencil Set</h3>
+                        <div class="product-footer">
+                            <span class="price">$24.50</span>
+                            <button class="btn btn-primary btn-sm"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
                 </div>
                 <!-- Product 3 -->
-                <div class="col-md-3">
-                    <div class="card-creative">
-                        <div class="card-img-wrapper">
-                            <img src="https://placehold.co/400x400/e2e8f0/64748b?text=Mabef+Easel" alt="Product">
-                        </div>
-                        <div class="p-3">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <div>
-                                    <small class="text-muted d-block mb-1">Studio</small>
-                                    <h6 class="mb-0 fw-bold"><a href="product.html" class="text-heading">Mabef Lyre
-                                            Easel</a></h6>
-                                </div>
-                                <span class="fw-bold text-primary">$189.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2 mb-3 pt-2 border-top border-opacity-10"
-                                style="border-color: var(--border-color) !important;">
-                                <img src="https://placehold.co/30x30/64748b/fff" class="rounded-circle"
-                                    style="width:24px;height:24px;">
-                                <small class="text-muted" style="font-size: 0.75rem;">Picked by <strong>Mike
-                                        T.</strong></small>
-                            </div>
-                            <button class="btn btn-outline-creative w-100 btn-sm">Add to Cart</button>
+                <div class="card product-card" data-animate="fade-up">
+                    <img src="https://images.unsplash.com/photo-1520406596245-4add8679f291?auto=format&fit=crop&q=80&w=300"
+                        alt="Product" class="product-img">
+                    <div class="product-info">
+                        <span class="product-cat">Paper</span>
+                        <h3 class="product-title">Watercolor Paper Block</h3>
+                        <div class="product-footer">
+                            <span class="price">$32.00</span>
+                            <button class="btn btn-primary btn-sm"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
                 </div>
                 <!-- Product 4 -->
-                <div class="col-md-3">
-                    <div class="card-creative">
-                        <div class="card-img-wrapper">
-                            <img src="https://placehold.co/400x400/e2e8f0/64748b?text=Copic+Set" alt="Product">
-                        </div>
-                        <div class="p-3">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <div>
-                                    <small class="text-muted d-block mb-1">Markers</small>
-                                    <h6 class="mb-0 fw-bold"><a href="product.html" class="text-heading">Copic
-                                            Sketch 72 Set</a></h6>
-                                </div>
-                                <span class="fw-bold text-primary">$320.00</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2 mb-3 pt-2 border-top border-opacity-10"
-                                style="border-color: var(--border-color) !important;">
-                                <img src="https://placehold.co/30x30/0f172a/fff" class="rounded-circle"
-                                    style="width:24px;height:24px;">
-                                <small class="text-muted" style="font-size: 0.75rem;">Picked by <strong>Emily
-                                        R.</strong></small>
-                            </div>
-                            <button class="btn btn-outline-creative w-100 btn-sm">Add to Cart</button>
+                <div class="card product-card" data-animate="fade-up">
+                    <img src="https://images.unsplash.com/photo-1515516089376-88db1e26e9c0?auto=format&fit=crop&q=80&w=300"
+                        alt="Product" class="product-img">
+                    <div class="product-info">
+                        <span class="product-cat">Brushes</span>
+                        <h3 class="product-title">Syntheic Fan Brush</h3>
+                        <div class="product-footer">
+                            <span class="price">$12.00</span>
+                            <button class="btn btn-primary btn-sm"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
                 </div>
@@ -404,77 +220,63 @@
         </div>
     </section>
 
-    <!-- Academy Preview -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6">
-                    <h2 class="mb-3">Learn from the <span class="text-gradient">Masters</span></h2>
-                    <p class="text-muted">Take your skills to the next level with our curated academy.</p>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <a href="home-2.html" class="btn btn-outline-creative">View All Tutorials</a>
-                </div>
+    <!-- Tutorial Preview Section -->
+    <section class="section" style="background: var(--bg-surface)">
+        <div class="container grid grid-2">
+            <div data-animate="fade-up">
+                <img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?auto=format&fit=crop&q=80&w=600"
+                    alt="Tutorial Preview" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
             </div>
+            <div class="hero-content" data-animate="fade-up">
+                <span class="hero-tag">Learn with Us</span>
+                <h2>Master the Art of <br>Watercolor</h2>
+                <p>Join over 10,000 artists in our most popular tutorial series. From basic washes to complex
+                    landscapes, we cover everything you need to know.</p>
+                <div class="features" style="margin-bottom: 30px;">
+                    <div class="d-flex" style="gap: 15px; margin-bottom: 15px;">
+                        <i class="bi bi-check-circle-fill" style="color: var(--success)"></i>
+                        <span>12 Comprehensive Video Lessons</span>
+                    </div>
+                    <div class="d-flex" style="gap: 15px; margin-bottom: 15px;">
+                        <i class="bi bi-check-circle-fill" style="color: var(--success)"></i>
+                        <span>Downloadable Reference Material</span>
+                    </div>
+                    <div class="d-flex" style="gap: 15px; margin-bottom: 15px;">
+                        <i class="bi bi-check-circle-fill" style="color: var(--success)"></i>
+                        <span>Direct Feedback from Masters</span>
+                    </div>
+                </div>
+                <a href="tutorials.html" class="btn btn-primary">Watch Free Preview</a>
+            </div>
+        </div>
+    </section>
 
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <article class="card-creative h-100">
-                        <div class="card-img-wrapper ratio ratio-16x9">
-                            <img src="https://placehold.co/600x400/1e293b/a5b4fc?text=Oil+Painting+Basics"
-                                alt="Tutorial">
-                            <div class="position-absolute bottom-0 start-0 p-2">
-                                <span class="badge bg-black bg-opacity-75"><i class="bi bi-clock"></i> 45m</span>
-                            </div>
-                        </div>
-                        <div class="p-4 d-flex flex-column h-100">
-                            <div class="mb-2">
-                                <span class="badge bg-success bg-opacity-10 text-success">Beginner</span>
-                                <span class="badge bg-secondary bg-opacity-10 text-secondary ms-1">Oil</span>
-                            </div>
-                            <h5 class="mb-2"><a href="#" class="text-heading">Mastering Oil Basics: Light & Shadow</a>
-                            </h5>
-                            <p class="text-muted small mb-3">Learn the fundamental techniques of oil painting...</p>
-                            <div class="mt-auto d-flex align-items-center gap-2">
-                                <img src="https://placehold.co/50x50/334155/fff?text=Art" class="avatar"
-                                    alt="Instructor">
-                                <span class="small text-muted fw-bold">Sarah Jenkins</span>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-4">
-                    <article class="card-creative h-100">
-                        <div class="card-img-wrapper ratio ratio-16x9">
-                            <img src="https://placehold.co/600x400/1e293b/f43f5e?text=Digital+Portraits" alt="Tutorial">
-                            <div class="position-absolute bottom-0 start-0 p-2">
-                                <span class="badge bg-black bg-opacity-75"><i class="bi bi-clock"></i> 1h 20m</span>
-                            </div>
-                        </div>
-                        <div class="p-4 d-flex flex-column h-100">
-                            <div class="mb-2">
-                                <span class="badge bg-warning bg-opacity-10 text-warning">Intermediate</span>
-                                <span class="badge bg-secondary bg-opacity-10 text-secondary ms-1">Digital</span>
-                            </div>
-                            <h5 class="mb-2"><a href="#" class="text-heading">Digital Portrait Painting Workflow</a>
-                            </h5>
-                            <p class="text-muted small mb-3">From sketch to final render using a tablet...</p>
-                            <div class="mt-auto d-flex align-items-center gap-2">
-                                <img src="https://placehold.co/50x50/334155/fff?text=Dev" class="avatar"
-                                    alt="Instructor">
-                                <span class="small text-muted fw-bold">David Chen</span>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-creative h-100 bg-primary text-white d-flex flex-column align-items-center justify-content-center p-5 text-center"
-                        style="border-color: var(--color-primary);">
-                        <i class="bi bi-mortarboard display-3 mb-3"></i>
-                        <h3>Join the Academy</h3>
-                        <p class="text-white-50 mb-4">Access 500+ premium tutorials and scale your art career.</p>
-                        <a href="home-2.html" class="btn btn-light text-primary fw-bold w-100 shadow-lg">Start
-                            Free Trial</a>
+    <!-- Artist Community & Newsletter -->
+    <section class="section">
+        <div class="container text-center">
+            <div class="card"
+                style="padding: 60px; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;"
+                data-animate="fade-up">
+                <h2 style="color: white; font-size: 2.5rem; margin-bottom: 20px;">Join the Global Artist Community</h2>
+                <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 40px;">Get weekly inspiration,
+                    artist showcases, and exclusive discounts delivered straight to your inbox.</p>
+                <form class="d-flex" style="max-width: 500px; margin: 0 auto; gap: 10px;">
+                    <input type="email" class="form-control" placeholder="Enter your email address" style="flex: 1;">
+                    <button class="btn btn-accent">Subscribe</button>
+                </form>
+                <div class="community-stats"
+                    style="margin-top: 40px; display: flex; justify-content: center; gap: 40px;">
+                    <div>
+                        <h3 style="color: white;">50k+</h3>
+                        <p style="font-size: 0.8rem; opacity: 0.8;">Active Artists</p>
+                    </div>
+                    <div>
+                        <h3 style="color: white;">120+</h3>
+                        <p style="font-size: 0.8rem; opacity: 0.8;">Expert Tutorials</p>
+                    </div>
+                    <div>
+                        <h3 style="color: white;">1k+</h3>
+                        <p style="font-size: 0.8rem; opacity: 0.8;">Daily Uploads</p>
                     </div>
                 </div>
             </div>
@@ -482,66 +284,125 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-surface pt-5 border-top" style="border-color: var(--border-color) !important;">
-        <div class="container pb-5">
-            <div class="row g-5">
-                <div class="col-lg-4">
-                    <a class="d-flex align-items-center gap-2 mb-3" href="index.html">
-                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-                            style="width: 32px; height: 32px;">
-                            <i class="bi bi-palette-fill small"></i>
-                        </div>
-                        <span class="font-heading fs-5 fw-bold">Palette</span>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon"><i class="bi bi-palette-fill"></i></div>
+                        <span>Palette</span>
                     </a>
-                    <p class="text-muted small mb-4">The ultimate ecosystem for creators. Shop supplies, learn from
-                        pros, and share your work.</p>
-                    <div class="d-flex gap-2">
-                        <a href="#" class="btn btn-sm btn-outline-creative rounded-circle"
-                            style="width:36px;height:36px;padding:0;display:flex;align-items:center;justify-content:center;"><i
-                                class="bi bi-instagram"></i></a>
-                        <a href="#" class="btn btn-sm btn-outline-creative rounded-circle"
-                            style="width:36px;height:36px;padding:0;display:flex;align-items:center;justify-content:center;"><i
-                                class="bi bi-twitter"></i></a>
-                        <a href="#" class="btn btn-sm btn-outline-creative rounded-circle"
-                            style="width:36px;height:36px;padding:0;display:flex;align-items:center;justify-content:center;"><i
-                                class="bi bi-youtube"></i></a>
+                    <p class="footer-desc">Premium art supplies for the modern creator. Bridge the gap between
+                        inspiration and masterpiece.</p>
+                    <div class="socials">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
-                <div class="col-6 col-lg-2">
-                    <h6 class="fw-bold mb-3">Shop</h6>
-                    <ul class="list-unstyled d-flex flex-column gap-2 small">
-                        <li><a href="#" class="text-muted">Paints</a></li>
-                        <li><a href="#" class="text-muted">Brushes</a></li>
-                        <li><a href="#" class="text-muted">Canvases</a></li>
-                        <li><a href="#" class="text-muted">Digital</a></li>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="artists.html">Artists</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-6 col-lg-2">
-                    <h6 class="fw-bold mb-3">Academy</h6>
-                    <ul class="list-unstyled d-flex flex-column gap-2 small">
-                        <li><a href="#" class="text-muted">All Courses</a></li>
-                        <li><a href="#" class="text-muted">Mentorship</a></li>
-                        <li><a href="#" class="text-muted">Become an Instructor</a></li>
+                <div>
+                    <h4 class="footer-title">Shop Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Oil Painting</a></li>
+                        <li><a href="#">Watercolor</a></li>
+                        <li><a href="#">Sketching</a></li>
+                        <li><a href="#">Digital Art</a></li>
+                        <li><a href="#">Canvas & Paper</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
-                    <h6 class="fw-bold mb-3">Stay Inspired</h6>
-                    <p class="text-muted small">Join our newsletter for weekly tips.</p>
-                    <form class="d-flex gap-2">
-                        <input type="email" class="form-control" placeholder="Email address">
-                        <button class="btn btn-primary-creative">Join</button>
-                    </form>
+                <div>
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-geo-alt me-2"></i> 123 Art Lane, Creative City</li>
+                        <li><i class="bi bi-envelope me-2"></i> hello@palette.com</li>
+                        <li><i class="bi bi-telephone me-2"></i> +1 (555) 000-0000</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Palette Art Supplies E-Commerce. All rights reserved.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
                 </div>
             </div>
         </div>
-        <div class="border-top py-4 text-center text-muted small" style="border-color: var(--border-color) !important;">
-            &copy; 2026 Palette Creative Ecosystem. All rights reserved.
-        </div>
     </footer>
 
-    <!-- Core JS -->
+    <!-- Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="text-center" style="margin-bottom: 30px;">
+                <h2 style="font-size: 1.8rem;">Welcome Back</h2>
+                <p class="text-muted">Login to your Palette account</p>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" placeholder="••••••••">
+                </div>
+                <div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+                    <label style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem;">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" style="font-size: 0.85rem; color: var(--primary);">Forgot Password?</a>
+                </div>
+                <button class="btn btn-primary w-100" style="width: 100%;">Sign In</button>
+            </form>
+            <p class="text-center" style="margin-top: 25px; font-size: 0.9rem; color: var(--text-muted);">
+                Don't have an account? <a href="#" onclick="closeModal(); openModal('signupModal')"
+                    style="color: var(--primary); font-weight: 600;">Sign Up</a>
+            </p>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="text-center" style="margin-bottom: 30px;">
+                <h2 style="font-size: 1.8rem;">Join the Community</h2>
+                <p class="text-muted">Create your free account today</p>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-control" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" placeholder="••••••••">
+                </div>
+                <button class="btn btn-primary w-100" style="width: 100%;">Create Account</button>
+            </form>
+            <p class="text-center" style="margin-top: 25px; font-size: 0.9rem; color: var(--text-muted);">
+                Already have an account? <a href="#" onclick="closeModal(); openModal('loginModal')"
+                    style="color: var(--primary); font-weight: 600;">Login</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- JS -->
     <script src="assets/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

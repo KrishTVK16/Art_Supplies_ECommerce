@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palette | Meet the Creative Minds</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="bi bi-palette-fill"></i></div>
+                <span>Palette</span>
+            </a>
+
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home 1</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="tutorials.html" class="nav-link">Tutorials</a>
+                <a href="artists.html" class="nav-link active">Artists</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="btn btn-outline btn-sm"><i class="bi bi-moon-stars"></i></button>
+                <button onclick="openModal('loginModal')" class="btn btn-outline btn-sm">Login</button>
+                <a href="dashboard.html" class="btn btn-primary btn-sm"><i class="bi bi-grid-fill"></i></a>
+                <div class="mobile-toggle"><i class="bi bi-list"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Artist Banner -->
+    <section class="section"
+        style="padding-top: calc(var(--header-height) + 60px); background: linear-gradient(rgba(67, 56, 202, 0.8), rgba(67, 56, 202, 0.8)), url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=1500') center/cover; color: white; text-align: center;">
+        <div class="container" data-animate="fade-up">
+            <h1 style="color: white; font-size: 4rem; margin-bottom: 20px;">The Palette Collective</h1>
+            <p style="font-size: 1.3rem; opacity: 0.9; max-width: 800px; margin: 0 auto 40px;">Celebrating the diverse
+                voices and brilliant minds shaping the future of contemporary art.</p>
+        </div>
+    </section>
+
+    <!-- Artist Profile Cards -->
+    <section class="section" style="background: var(--bg-surface)">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <h2>Our Resident Artists</h2>
+                <p>Learn from and connect with the best in the industry.</p>
+            </div>
+
+            <div class="grid grid-3">
+                <!-- Artist 1 -->
+                <div class="card text-center" data-animate="fade-up">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200"
+                        alt="Artist"
+                        style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px;">
+                    <h3>Mia Flores</h3>
+                    <p class="product-cat">Watercolor Master</p>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 25px;">Exploring the intersection of
+                        light and emotion through fluid watercolors.</p>
+                    <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 25px;">
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-globe"></i></a>
+                    </div>
+                    <button class="btn btn-outline btn-sm w-100">View Portfolio</button>
+                </div>
+                <!-- Artist 2 -->
+                <div class="card text-center" data-animate="fade-up" style="transition-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+                        alt="Artist"
+                        style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px;">
+                    <h3>Alex Thorne</h3>
+                    <p class="product-cat">Digital Illustrator</p>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 25px;">Creating otherworldly
+                        landscapes and futuristic character designs.</p>
+                    <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 25px;">
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                    <button class="btn btn-outline btn-sm w-100">View Portfolio</button>
+                </div>
+                <!-- Artist 3 -->
+                <div class="card text-center" data-animate="fade-up" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200"
+                        alt="Artist"
+                        style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px;">
+                    <h3>Sarah Jenkins</h3>
+                    <p class="product-cat">Oil Painter</p>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 25px;">Classic techniques meets
+                        modern themes in large-scale oil portraits.</p>
+                    <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 25px;">
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                    </div>
+                    <button class="btn btn-outline btn-sm w-100">View Portfolio</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Artwork Section -->
+    <section class="section">
+        <div class="container">
+            <div class="card"
+                style="padding: 60px; border: 2px dashed var(--border); background: var(--bg-body); text-align: center;"
+                data-animate="fade-up">
+                <div style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;">
+                    <i class="bi bi-cloud-upload"></i>
+                </div>
+                <h2>Showcase Your Work</h2>
+                <p class="text-muted" style="max-width: 600px; margin: 0 auto 30px;">Are you using Palette supplies?
+                    Upload your latest creation to be featured in our community gallery and get a chance to win $100 in
+                    store credit.</p>
+                <div style="display: flex; justify-content: center; gap: 20px;">
+                    <button class="btn btn-primary">Upload Artwork</button>
+                    <button class="btn btn-outline">Read Rules</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Gallery Section -->
+    <section class="section" style="background: var(--bg-surface)">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <h2>Community Gallery</h2>
+                <p>The latest masterpieces from our global community.</p>
+            </div>
+
+            <div class="grid grid-4">
+                <div class="card" style="padding: 0; aspect-ratio: 1;" data-animate="fade-in">
+                    <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&q=80&w=400"
+                        alt="Art" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="card" style="padding: 0; aspect-ratio: 1;" data-animate="fade-in">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=400"
+                        alt="Art" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="card" style="padding: 0; aspect-ratio: 1;" data-animate="fade-in">
+                    <img src="https://images.unsplash.com/photo-1515405295579-ba7b45403062?auto=format&fit=crop&q=80&w=400"
+                        alt="Art" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="card" style="padding: 0; aspect-ratio: 1;" data-animate="fade-in">
+                    <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&q=80&w=400"
+                        alt="Art" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="card" style="padding: 0; aspect-ratio: 1;" data-animate="fade-in">
+                    <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80&w=400"
+                        alt="Art" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="card" style="padding: 0; aspect-ratio: 1;" data-animate="fade-in">
+                    <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&q=80&w=400"
+                        alt="Art" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="card" style="padding: 0; aspect-ratio: 1;" data-animate="fade-in">
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=400"
+                        alt="Art" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="card" style="padding: 0; aspect-ratio: 1;" data-animate="fade-in">
+                    <img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?auto=format&fit=crop&q=80&w=400"
+                        alt="Art" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 50px;">
+                <button class="btn btn-outline">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Section -->
+    <section class="section">
+        <div class="container">
+            <div class="card"
+                style="background: var(--text-heading); color: white; display: flex; flex-direction: row; align-items: center; gap: 60px; padding: 60px;"
+                data-animate="fade-up">
+                <div style="flex: 1;">
+                    <h2 style="color: white; font-size: 2.5rem; margin-bottom: 20px;">Collaboration & Residencies</h2>
+                    <p style="opacity: 0.8; margin-bottom: 30px;">Are you a professional artist looking to collaborate
+                        on a product line or host a workshop? We're always looking for new perspectives.</p>
+                    <button class="btn btn-primary" style="background: white; color: var(--text-heading);">Get in
+                        Touch</button>
+                </div>
+                <div style="flex: 1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                    <div
+                        style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: center;">
+                        <h4 style="color: white;">Residencies</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">3-month studio space</p>
+                    </div>
+                    <div
+                        style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: center;">
+                        <h4 style="color: white;">Product Lines</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">Co-branded collections</p>
+                    </div>
+                    <div
+                        style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: center;">
+                        <h4 style="color: white;">Workshops</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">Digital & Physical</p>
+                    </div>
+                    <div
+                        style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: center;">
+                        <h4 style="color: white;">Grants</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">Material sponsorships</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon"><i class="bi bi-palette-fill"></i></div>
+                        <span>Palette</span>
+                    </a>
+                    <p class="footer-desc">Premium art supplies for the modern creator. Bridge the gap between
+                        inspiration and masterpiece.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="artists.html">Artists</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Community</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Challenges</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,58 +1,95 @@
-/**
- * Creative Ecosystem Core JS
- * Handles Theme Toggle, Global UI Events
+/* 
+ * Art Supplies E-Commerce - Core Interactions
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    initTheme();
-    initNavbar();
-});
+    // 1. Sticky Header & Scroll Top
+    const header = document.querySelector('.header');
 
-/* --- 1. Theme System (Light/Dark) --- */
-function initTheme() {
-    const toggleBtn = document.querySelector('.theme-toggle-btn');
-    const html = document.documentElement;
-    const icon = toggleBtn?.querySelector('i');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 
-    // Check LocalStorage or System Preference
-    const savedTheme = localStorage.getItem('theme');
-    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // 2. Mobile Menu Toggle (Simplified)
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const nav = document.querySelector('.nav');
 
-    if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
-        html.setAttribute('data-theme', 'dark');
-        updateIcon(true);
-    } else {
-        html.setAttribute('data-theme', 'light');
-        updateIcon(false);
-    }
-
-    if (toggleBtn) {
-        toggleBtn.addEventListener('click', () => {
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateIcon(newTheme === 'dark');
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            icon.classList.toggle('bi-list');
+            icon.classList.toggle('bi-x');
         });
     }
 
-    function updateIcon(isDark) {
-        if (!icon) return;
-        icon.className = isDark ? 'bi bi-sun-fill' : 'bi bi-moon-fill';
-    }
-}
+    // 3. Scroll Reveal Animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-/* --- 2. Navbar Effects --- */
-function initNavbar() {
-    const navbar = document.querySelector('.navbar-glass');
-    if (navbar) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 10px 30px -10px rgba(0,0,0,0.1)';
-            } else {
-                navbar.style.boxShadow = 'none';
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
             }
         });
+    }, observerOptions);
+
+    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
+    // 4. Modal Handling (Login/Signup)
+    const loginModal = document.getElementById('loginModal');
+    const signupModal = document.getElementById('signupModal');
+    const closeBtns = document.querySelectorAll('.close-modal');
+
+    window.openModal = (modalId) => {
+        const modal = document.getElementById(modalId);
+        if (modal) modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    window.closeModal = () => {
+        document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+        document.body.style.overflow = 'auto';
+    };
+
+    closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
+
+    // Close modal on background click
+    window.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal')) closeModal();
+    });
+
+    // 5. Theme Toggle Logic
+    const themeBtn = document.getElementById('themeToggle');
+    const body = document.documentElement;
+
+    if (themeBtn) {
+        // Initial state
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        body.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeBtn.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
     }
-}
+
+    function updateThemeIcon(theme) {
+        const icon = themeBtn?.querySelector('i');
+        if (icon) {
+            icon.className = theme === 'light' ? 'bi bi-moon-stars' : 'bi bi-sun';
+        }
+    }
+});
