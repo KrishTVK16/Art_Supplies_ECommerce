@@ -1,0 +1,91 @@
+/* Shop Layout */
+.shop-layout {
+    display: flex;
+    gap: 40px;
+}
+
+.shop-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.shop-content {
+    flex: 1;
+}
+
+.shop-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Mobile Filter & Sort */
+.mobile-filter-btn {
+    display: none;
+}
+
+.mobile-sort-container {
+    display: none;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 992px) {
+    .shop-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .shop-sidebar {
+        width: 100%;
+        display: none;
+        /* Hidden by default */
+        background: var(--bg-surface);
+        padding: 20px;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border);
+        margin-bottom: 20px;
+    }
+
+    .shop-sidebar.active {
+        display: block;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    .mobile-filter-btn {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .mobile-sort-container {
+        display: block;
+    }
+
+    /* Hide desktop toolbar sort on mobile since we moved it to sidebar */
+    .shop-toolbar .form-control {
+        display: none;
+    }
+
+    .shop-toolbar {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

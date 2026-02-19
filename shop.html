@@ -8,6 +8,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/shop.css">
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -41,12 +42,7 @@
 
             <div class="header-actions">
                 <button id="themeToggle" class="btn btn-outline btn-sm"><i class="bi bi-moon-stars"></i></button>
-                <a href="checkout.html" class="header-cart"
-                    style="position: relative; cursor: pointer; color: var(--text-heading); margin-right: 5px;">
-                    <i class="bi bi-bag fs-5"></i>
-                    <span
-                        style="position: absolute; top: -8px; right: -8px; background: var(--accent); color: white; width: 18px; height: 18px; border-radius: 50%; font-size: 0.7rem; display: flex; align-items: center; justify-content: center;">2</span>
-                </a>
+
                 <button onclick="window.location.href='login.html'"
                     class="btn btn-outline btn-sm d-none d-md-inline-block">Login</button>
                 <button onclick="window.location.href='register.html'"
@@ -69,12 +65,30 @@
     </section>
 
     <!-- Shop Content -->
+    <!-- Shop Content -->
     <section class="section">
         <div class="container">
-            <div style="display: flex; gap: 40px;">
+            <!-- Mobile Filter Toggle -->
+            <button id="filterToggle" class="btn btn-outline mobile-filter-btn"
+                style="width: 100%; margin-bottom: 20px; display: none;">
+                <i class="bi bi-funnel"></i> Show Filters & Sort
+            </button>
+
+            <div class="shop-layout">
 
                 <!-- Sidebar Filters -->
-                <aside style="width: 280px; flex-shrink: 0;" data-animate="fade-up">
+                <aside class="shop-sidebar" data-animate="fade-up">
+                    <!-- Mobile Sort Options (only visible on mobile) -->
+                    <div class="mobile-sort-container" style="display: none;">
+                        <h4 class="footer-title">Sort By</h4>
+                        <select class="form-control" style="width: 100%; margin-bottom: 20px;">
+                            <option>Sort by: Popularity</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Newest Arrivals</option>
+                        </select>
+                    </div>
+
                     <div style="margin-bottom: 40px;">
                         <h4 class="footer-title">Categories</h4>
                         <ul class="footer-links">
@@ -124,11 +138,10 @@
                 </aside>
 
                 <!-- Product Grid -->
-                <div style="flex: 1;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;"
-                        data-animate="fade-up">
+                <div class="shop-content">
+                    <div class="shop-toolbar" data-animate="fade-up">
                         <p class="text-muted">Showing 1-12 of 84 products</p>
-                        <select class="form-control" style="width: auto; padding: 10px 20px;">
+                        <select class="form-control desktop-sort" style="width: auto; padding: 10px 20px;">
                             <option>Sort by: Popularity</option>
                             <option>Price: Low to High</option>
                             <option>Price: High to Low</option>
@@ -144,7 +157,7 @@
                                 alt="Product" class="product-img">
                             <div class="product-info">
                                 <span class="product-cat">Paints</span>
-                                <h3 class="product-title">Professional Oil Tubes (Set of 24)</h3>
+                                <h3 class="product-title">Professional Oil Tubes</h3>
                                 <div class="product-footer">
                                     <span class="price">$149.99</span>
                                     <button class="btn btn-primary btn-sm"><i class="bi bi-cart-plus"></i></button>

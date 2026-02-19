@@ -554,9 +554,14 @@ textarea {
         width: 100%;
         height: 100vh;
         background: var(--bg-surface);
-        padding: 100px 40px;
+        padding: 80px 20px 40px;
+        /* Reduced padding */
         transition: var(--transition);
         z-index: 999;
+        overflow-y: auto;
+        /* Allow scrolling if content overflows */
+        justify-content: flex-start;
+        /* Align to top */
     }
 
     .nav.active {
@@ -564,8 +569,13 @@ textarea {
     }
 
     .nav-link {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
+        font-size: 1.25rem;
+        /* Reduced font size */
+        margin-bottom: 15px;
+        /* Reduced margin */
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
     }
 
     .mobile-toggle {
@@ -580,6 +590,17 @@ textarea {
     .mobile-auth,
     .mobile-profile {
         display: block;
+    }
+
+    /* Adjust Mobile Auth Spacing */
+    .mobile-auth {
+        margin-top: 20px !important;
+        padding-top: 20px !important;
+        width: 100%;
+    }
+
+    .mobile-auth button {
+        margin-bottom: 10px !important;
     }
 }
 
@@ -1072,8 +1093,12 @@ textarea {
 }
 
 /* Multi-home Support */
+/* Multi-home Support */
 .hero-full {
-    height: 100vh;
+    min-height: 100vh;
+    /* Changed from height: 100vh to fit content on mobile */
+    width: 100%;
+    /* Ensure no overflow */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1082,6 +1107,10 @@ textarea {
     text-align: center;
     color: white;
     position: relative;
+    padding-top: var(--header-height);
+    /* Space for fixed header */
+    overflow: hidden;
+    /* Prevent any child overflow */
 }
 
 .hero-full::after {
@@ -1097,10 +1126,34 @@ textarea {
 .hero-full .container {
     position: relative;
     z-index: 1;
+    width: 100%;
+    /* Ensure container fits */
 }
 
 .hero-full h1 {
     color: white;
+    font-size: 5rem;
+    /* Default desktop size */
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .hero-full h1 {
+        font-size: 3rem;
+        /* Smaller on mobile */
+    }
+
+    .hero-full {
+        padding-top: calc(var(--header-height) + 60px);
+        /* Extra spacing on mobile */
+    }
+
+    .hero-full p {
+        font-size: 1.1rem !important;
+        /* Override inline style if needed, or just let it flow */
+        padding: 0 15px;
+    }
 }
 
 /* Dashboard Sidebar */

@@ -6,13 +6,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Sticky Header & Scroll Top
     const header = document.querySelector('.header');
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
 
     // 2. Mobile Menu Toggle (Simplified)
     const mobileToggle = document.querySelector('.mobile-toggle');
@@ -109,6 +111,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 top: 0,
                 behavior: 'smooth'
             });
+        });
+    }
+    // 7. Shop Filter Toggle
+    const filterBtn = document.getElementById('filterToggle');
+    const shopSidebar = document.querySelector('.shop-sidebar');
+
+    if (filterBtn && shopSidebar) {
+        filterBtn.addEventListener('click', () => {
+            shopSidebar.classList.toggle('active');
+
+            // Toggle text
+            if (shopSidebar.classList.contains('active')) {
+                filterBtn.innerHTML = '<i class="bi bi-x-lg"></i> Close Filters';
+            } else {
+                filterBtn.innerHTML = '<i class="bi bi-funnel"></i> Show Filters & Sort';
+            }
         });
     }
 });
