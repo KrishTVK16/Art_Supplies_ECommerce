@@ -58,6 +58,20 @@
     --input-bg: #0f172a;
     --glass: rgba(15, 23, 42, 0.7);
     --glass-border: rgba(255, 255, 255, 0.05);
+
+    /* Reassign colors for better contrast on dark */
+    --primary: #818cf8;
+    /* Use lighter indigo for primary in dark mode */
+    --primary-dark: #4338ca;
+    /* Use original primary as dark variant */
+}
+
+/* Dark Mode Sidebar Link Override */
+[data-theme="dark"] .sidebar-link:hover,
+[data-theme="dark"] .sidebar-link.active {
+    background: rgba(129, 140, 248, 0.15);
+    /* Based on --primary (#818cf8) with opacity */
+    color: var(--primary);
 }
 
 /* --- Reset & Base --- */
@@ -554,14 +568,14 @@ textarea {
         width: 100%;
         height: 100vh;
         background: var(--bg-surface);
-        padding: 80px 20px 40px;
-        /* Reduced padding */
+        padding: 85px 20px 20px;
+        /* Optimized padding */
         transition: var(--transition);
         z-index: 999;
         overflow-y: auto;
-        /* Allow scrolling if content overflows */
+        /* Allow scroll if absolutely necessary */
         justify-content: flex-start;
-        /* Align to top */
+        align-items: center;
     }
 
     .nav.active {
@@ -569,13 +583,13 @@ textarea {
     }
 
     .nav-link {
-        font-size: 1.25rem;
-        /* Reduced font size */
-        margin-bottom: 15px;
-        /* Reduced margin */
+        font-size: 1.1rem;
+        /* Optimized font size */
+        margin-bottom: 12px;
+        /* Tighter spacing */
         width: 100%;
         text-align: center;
-        padding: 5px 0;
+        padding: 4px 0;
     }
 
     .mobile-toggle {
@@ -589,18 +603,52 @@ textarea {
 
     .mobile-auth,
     .mobile-profile {
-        display: block;
+        display: flex;
+        flex-direction: row;
+        /* Side by side to save height */
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
     }
 
     /* Adjust Mobile Auth Spacing */
     .mobile-auth {
-        margin-top: 20px !important;
-        padding-top: 20px !important;
+        margin-top: 15px !important;
+        padding-top: 15px !important;
+        border-top: 1px solid var(--border);
         width: 100%;
+        max-width: 340px;
     }
 
     .mobile-auth button {
-        margin-bottom: 10px !important;
+        margin-bottom: 0 !important;
+        /* Remove bottom margin */
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Small screen adjustments to ensure fit */
+    @media (max-height: 700px) {
+        .nav {
+            padding-top: 75px;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            padding: 2px 0;
+        }
+
+        .mobile-auth {
+            margin-top: 10px !important;
+            padding-top: 10px !important;
+        }
+
+        .mobile-auth button {
+            padding: 8px 15px;
+            font-size: 0.85rem;
+        }
     }
 }
 
@@ -1015,26 +1063,101 @@ textarea {
 }
 
 /* Auth Pages Specific */
+/* Auth Pages Specific */
 .auth-wrapper {
     min-height: 100vh;
+    /* Allow growth */
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    background: var(--bg-body);
+    padding: 20px 15px;
+    /* Ensure padding for scroll */
+    background-color: var(--bg-body);
+    background-image: none !important;
+    overflow-y: auto;
+    /* Allow scroll if needed anywhere */
 }
 
 .auth-card {
     background: var(--bg-surface);
-    padding: 50px;
+    padding: 30px 35px;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     width: 100%;
-    max-width: 500px;
+    max-width: 420px;
+    /* No fixed max-height, let content dictate */
+    margin: 20px 0;
+    /* Add margin for scroll spacing */
+}
+
+.text-center {
+    margin-bottom: 20px !important;
+}
+
+.auth-card h2 {
+    margin-bottom: 5px;
+    font-size: 1.6rem;
+}
+
+.auth-card .logo {
+    margin-bottom: 15px !important;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+.form-control {
+    padding: 10px 15px;
+}
+
+/* Mobile/Tablet Compact View */
+@media (max-width: 768px) {
+    .auth-card {
+        padding: 20px;
+        box-shadow: none;
+        /* Remove shadow for cleaner mobile look */
+        background: transparent;
+        /* Blend with bg */
+    }
+}
+
+/* Optimize for Small Heights (Phones/Landscape) */
+@media (max-height: 800px) {
+    .auth-card {
+        padding: 15px 20px;
+    }
+
+    .auth-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .text-center {
+        margin-bottom: 15px !important;
+    }
+
+    .logo {
+        margin-bottom: 10px !important;
+    }
+
+    .auth-separator {
+        margin: 15px 0 10px;
+    }
+
+    .social-login-group {
+        margin-bottom: 10px;
+    }
 }
 
 .form-label {
@@ -1160,6 +1283,58 @@ textarea {
 .dashboard-container {
     display: flex;
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+/* Dashboard Toggle Button (Mobile/Tablet) */
+.dashboard-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+    /* Above sidebar */
+    background: var(--bg-surface);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--primary);
+    cursor: pointer;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.dashboard-toggle:hover {
+    transform: scale(1.05);
+    background: var(--primary);
+    color: white;
+}
+
+/* Dashboard Overlay */
+.dashboard-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    /* Below sidebar but above content */
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    backdrop-filter: blur(4px);
+}
+
+.dashboard-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .sidebar-header {
@@ -1178,6 +1353,9 @@ textarea {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    z-index: 1050;
+    transition: var(--transition);
+    /* Smooth slide */
 }
 
 .sidebar-nav li {
@@ -1203,28 +1381,148 @@ textarea {
 .main-content {
     flex: 1;
     padding: 40px;
+    width: 100%;
+    /* Ensure it takes full width */
+    max-width: 100%;
 }
 
-@media (max-width: 768px) {
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 992px) {
     .dashboard-container {
-        flex-direction: column;
+        display: block;
+        /* Remove flex to avoid sidebar taking space */
+    }
+
+    .dashboard-toggle {
+        display: flex;
+        /* Show toggle */
     }
 
     .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-        padding: 20px;
+        position: fixed;
+        left: -280px;
+        /* Hide off-screen */
+        box-shadow: var(--shadow-lg);
+        height: 100vh;
+        overflow-y: auto;
     }
 
-    .sidebar-header {
-        margin-bottom: 20px;
-        padding-bottom: 15px;
+    .sidebar.active {
+        left: 0;
+        /* Slide in */
     }
 
     .main-content {
-        padding: 20px;
+        padding: 80px 20px 40px;
+        /* Top padding for toggle button */
+        margin-left: 0;
+    }
+
+    .sidebar-header {
+        margin-top: 40px;
+        /* Push down header inside sidebar to not overlap with close button logic if added, but mainly for spacing */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 280px;
+        /* Keep fixed width drawer */
+    }
+
+    .main-content {
+        padding: 80px 20px 20px;
+    }
+}
+
+/* Auth Separator & Social Icons */
+.auth-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0 20px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.auth-separator::before,
+.auth-separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--border);
+}
+
+.auth-separator span {
+    padding: 0 15px;
+}
+
+/* Social Login Buttons */
+.social-login-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    /* Reduced from 25px, can go lower if needed */
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 15px;
+    /* Reduced from 40px inline style */
+}
+
+/* Mobile adjustments handled by general media queries, 
+   but ensuring tight spacing for small heights */
+@media (max-height: 800px) {
+    .social-login-group {
+        margin-bottom: 10px;
+    }
+
+    .auth-footer {
+        margin-top: 10px;
+    }
+}
+
+.social-login-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: var(--text-muted);
+    position: relative;
+    z-index: 1;
+}
+
+.social-login-btn.facebook {
+    color: #1877F2;
+}
+
+.social-login-btn.google {
+    color: #DB4437;
+}
+
+/* Desktop Hover Effects */
+@media (hover: hover) {
+    .social-login-btn:hover {
+        transform: scale(1.15);
+        border-color: transparent;
+        color: white;
+    }
+
+    .social-login-btn.facebook:hover {
+        background: #1877F2;
+        box-shadow: 0 8px 15px rgba(24, 119, 242, 0.3);
+    }
+
+    .social-login-btn.google:hover {
+        background: #DB4437;
+        box-shadow: 0 8px 15px rgba(219, 68, 55, 0.3);
     }
 }

@@ -37,18 +37,32 @@
                     <small style="color: var(--text-muted); font-size: 0.75rem;">Must be at least 8 characters
                         long</small>
                 </div>
+                <div class="form-group" style="margin-bottom: 25px;">
+                    <label
+                        style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; cursor: pointer;">
+                        <input type="checkbox" required style="margin-top: 3px;">
+                        <span style="color: var(--text-muted);">I agree to the <a href="#"
+                                style="color: var(--primary); font-weight: 600;">Terms & Conditions</a></span>
+                    </label>
+                </div>
+
                 <button type="submit" class="btn btn-primary w-100" style="width: 100%; padding: 15px;">Create
                     Account</button>
+
+                <div class="auth-separator">
+                    <span>OR Continue with</span>
+                </div>
+                <div class="social-login-group">
+                    <button type="button" class="social-login-btn google"><i class="bi bi-google"></i></button>
+                    <button type="button" class="social-login-btn facebook"><i class="bi bi-facebook"></i></button>
+                </div>
             </form>
 
-            <div style="margin-top: 40px; text-align: center;">
+            <div class="auth-footer">
                 <p class="text-muted" style="font-size: 0.95rem;">Already have an account? <a href="login.html"
                         style="color: var(--primary); font-weight: 700;">Sign In</a></p>
             </div>
-            <div style="margin-top: 25px; padding-top: 25px; border-top: 1px solid var(--border); text-align: center;">
-                <p style="font-size: 0.8rem; color: var(--text-muted);">By signing up, you agree to our <a
-                        href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
-            </div>
+
         </div>
     </div>
     <script src="assets/js/main.js"></script>

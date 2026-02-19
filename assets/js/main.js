@@ -69,15 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 5. Theme Toggle Logic
+    // 5. Theme Toggle Logic
     const themeBtn = document.getElementById('themeToggle');
     const body = document.documentElement;
 
-    if (themeBtn) {
-        // Initial state
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        body.setAttribute('data-theme', savedTheme);
-        updateThemeIcon(savedTheme);
+    // Apply theme on load (always run this)
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    body.setAttribute('data-theme', savedTheme);
+    if (themeBtn) updateThemeIcon(savedTheme);
 
+    if (themeBtn) {
         themeBtn.addEventListener('click', () => {
             const currentTheme = body.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
@@ -127,6 +128,33 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 filterBtn.innerHTML = '<i class="bi bi-funnel"></i> Show Filters & Sort';
             }
+        });
+    }
+
+    // 8. Dashboard Mobile Toggle
+    const dashboardToggle = document.querySelector('.dashboard-toggle');
+    const dashboardSidebar = document.querySelector('.sidebar');
+    const dashboardOverlay = document.querySelector('.dashboard-overlay');
+
+    if (dashboardToggle && dashboardSidebar && dashboardOverlay) {
+        dashboardToggle.addEventListener('click', () => {
+            dashboardSidebar.classList.toggle('active');
+            dashboardOverlay.classList.toggle('active');
+
+            // Toggle icon
+            const icon = dashboardToggle.querySelector('i');
+            if (dashboardSidebar.classList.contains('active')) {
+                icon.className = 'bi bi-x-lg';
+            } else {
+                icon.className = 'bi bi-list';
+            }
+        });
+
+        // Close on overlay click
+        dashboardOverlay.addEventListener('click', () => {
+            dashboardSidebar.classList.remove('active');
+            dashboardOverlay.classList.remove('active');
+            dashboardToggle.querySelector('i').className = 'bi bi-list';
         });
     }
 });
