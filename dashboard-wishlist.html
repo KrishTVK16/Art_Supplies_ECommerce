@@ -1,182 +1,73 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" dir="ltr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Wishlists | Palette</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+    <title>My Wishlist | Palette Art Supplies</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon"><i class="bi bi-palette-fill"></i></div>
-                <span>Palette</span>
-            </a>
-
-            <nav class="nav">
-                <a href="index.html" class="nav-link">Home 1</a>
-                <a href="home-2.html" class="nav-link">Home 2</a>
-                <a href="shop.html" class="nav-link">Shop</a>
-                <a href="tutorials.html" class="nav-link">Tutorials</a>
-                <a href="artists.html" class="nav-link">Artists</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <a href="dashboard.html" class="nav-link active">Dashboard</a>
-                <div class="mobile-profile d-md-none w-100 mt-4 pt-4 border-top">
-                    <div class="d-flex align-items-center gap-3 mb-4">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=40"
-                            alt="Avatar" style="width: 40px; height: 40px; border-radius: 50%;">
-                        <div>
-                            <div class="fw-bold">Mia Flores</div>
-                            <small class="text-muted">Pro Artist</small>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <div class="header-actions">
-                <button id="themeToggle" class="btn btn-outline btn-sm"><i class="bi bi-moon-stars"></i></button>
-                <a href="checkout.html" class="header-cart"
-                    style="position: relative; cursor: pointer; color: var(--text-heading); margin-right: 5px;">
-                    <i class="bi bi-bag fs-5"></i>
-                    <span
-                        style="position: absolute; top: -8px; right: -8px; background: var(--accent); color: white; width: 18px; height: 18px; border-radius: 50%; font-size: 0.7rem; display: flex; align-items: center; justify-content: center;">2</span>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" data-animate="fade-in">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><i class="bi bi-palette-fill"></i></div>
+                    <span>Palette</span>
                 </a>
-                <div class="d-none d-md-flex align-items-center gap-2 px-3 py-1 bg-surface border rounded-pill">
-                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=30"
-                        alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%;">
-                    <span style="font-weight: 600; font-size: 0.9rem;">Mia Flores</span>
-                    <i class="bi bi-chevron-down ms-1" style="font-size: 0.7rem;"></i>
-                </div>
-                <div class="mobile-toggle"><i class="bi bi-list"></i></div>
             </div>
-        </div>
-    </header>
+            <ul class="sidebar-nav">
+                <li><a href="dashboard.html" class="sidebar-link"><i class="bi bi-grid"></i> Overview</a></li>
+                <li><a href="dashboard-orders.html" class="sidebar-link"><i class="bi bi-bag"></i> My Orders</a></li>
+                <li><a href="dashboard-wishlist.html" class="sidebar-link active"><i class="bi bi-heart"></i>
+                        Wishlist</a></li>
+                <li><a href="dashboard-learning.html" class="sidebar-link"><i class="bi bi-play-circle"></i> My
+                        Tutorials</a></li>
+                <li><a href="dashboard-profile.html" class="sidebar-link"><i class="bi bi-person"></i> Profile
+                        Settings</a></li>
+                <li><a href="#" class="sidebar-link"><i class="bi bi-shield-lock"></i> Security</a></li>
+                <li style="margin-top: 40px;"><a href="index.html" class="sidebar-link" style="color: var(--accent);"><i
+                            class="bi bi-box-arrow-left"></i> Logout</a></li>
+            </ul>
+        </aside>
 
-    <div class="section-padding pt-5 mt-5">
-        <div class="container pt-4">
-            <div class="row g-5">
-                <!-- Sidebar -->
-                <div class="col-lg-3 d-none d-lg-block">
-                    <div class="card-creative p-4 border-0 shadow-sm bg-surface sticky-top" style="top: 100px;">
-                        <div class="text-center mb-4">
-                            <div class="position-relative d-inline-block mb-3">
-                                <img src="https://placehold.co/100x100/334155/fff?text=ME"
-                                    class="rounded-circle border border-4 border-surface shadow-sm">
-                            </div>
-                            <h5 class="font-heading fw-bold mb-1">Emily Painter</h5>
-                        </div>
-                        <div class="nav flex-column nav-pills gap-2">
-                            <a href="dashboard.html" class="nav-link d-flex align-items-center gap-3 text-muted">
-                                <i class="bi bi-grid"></i> Studio Overview
-                            </a>
-                            <a href="dashboard-learning.html"
-                                class="nav-link d-flex align-items-center gap-3 text-muted">
-                                <i class="bi bi-mortarboard"></i> My Learning
-                            </a>
-                            <a href="dashboard-wishlist.html"
-                                class="nav-link active d-flex align-items-center gap-3 fw-bold">
-                                <i class="bi bi-heart-fill"></i> Wishlists
-                            </a>
-                            <a href="dashboard-profile.html"
-                                class="nav-link d-flex align-items-center gap-3 text-muted">
-                                <i class="bi bi-person-gear"></i> Settings
-                            </a>
-                        </div>
+        <!-- Main Content -->
+        <main class="main-content">
+            <div style="margin-bottom: 40px;" data-animate="fade-up">
+                <h1>My Wishlist</h1>
+                <p class="text-muted">Art supplies you're keeping an eye on for your next masterpiece.</p>
+            </div>
+
+            <div class="grid grid-3" data-animate="fade-up">
+                <div class="card" style="padding: 0;">
+                    <div class="wishlist-btn active" style="color: var(--accent);"><i class="bi bi-heart-fill"></i>
                     </div>
-                </div>
-
-                <!-- Main Content -->
-                <div class="col-lg-9">
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h2 class="font-heading fw-bold m-0">Your Wishlists</h2>
-                        <button class="btn btn-outline-creative btn-sm"><i class="bi bi-plus-lg"></i> New List</button>
-                    </div>
-
-                    <!-- List Tabs -->
-                    <ul class="nav nav-pills mb-4 gap-2">
-                        <li class="nav-item">
-                            <a class="nav-link active bg-primary text-white" href="#">Watercolor Setup</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link bg-surface text-muted" href="#">Dream Studio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link bg-surface text-muted" href="#">Gifts</a>
-                        </li>
-                    </ul>
-
-                    <!-- Products -->
-                    <div class="row g-4">
-                        <!-- Product 1 -->
-                        <div class="col-md-4">
-                            <div class="card-creative">
-                                <div class="card-img-wrapper">
-                                    <span class="position-absolute top-0 start-0 m-3 badge bg-danger">Price Drop!</span>
-                                    <img src="https://placehold.co/400x400/e2e8f0/64748b?text=Arches+Paper"
-                                        alt="Product">
-                                    <button
-                                        class="btn btn-light position-absolute top-0 end-0 m-3 btn-sm rounded-circle text-danger"><i
-                                            class="bi bi-heart-fill"></i></button>
-                                </div>
-                                <div class="p-3">
-                                    <h6 class="mb-1 fw-bold"><a href="../product.html" class="text-heading">Arches
-                                            Watercolor Block</a></h6>
-                                    <div class="d-flex justify-content-between align-items-center mt-2 mb-3">
-                                        <div>
-                                            <span class="fw-bold text-success">$55.00</span>
-                                            <small class="text-muted text-decoration-line-through">$65.00</small>
-                                        </div>
-                                    </div>
-                                    <button class="btn btn-primary-creative w-100 btn-sm">Move to Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product 2 -->
-                        <div class="col-md-4">
-                            <div class="card-creative">
-                                <div class="card-img-wrapper">
-                                    <img src="https://placehold.co/400x400/e2e8f0/64748b?text=Brush+Set" alt="Product">
-                                    <button
-                                        class="btn btn-light position-absolute top-0 end-0 m-3 btn-sm rounded-circle text-danger"><i
-                                            class="bi bi-heart-fill"></i></button>
-                                </div>
-                                <div class="p-3">
-                                    <h6 class="mb-1 fw-bold"><a href="../product.html" class="text-heading">Sable
-                                            Brush Set</a></h6>
-                                    <div class="d-flex justify-content-between align-items-center mt-2 mb-3">
-                                        <span class="fw-bold text-primary">$120.00</span>
-                                    </div>
-                                    <button class="btn btn-primary-creative w-100 btn-sm">Move to Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Add Item Placeholder -->
-                        <div class="col-md-4">
-                            <a href="../shop.html"
-                                class="card-creative h-100 border-dashed border-2 d-flex flex-column align-items-center justify-content-center text-center text-decoration-none p-4 text-muted hover-bg-light"
-                                style="border-style: dashed;">
-                                <i class="bi bi-plus-circle display-4 mb-2 opacity-50"></i>
-                                <span class="fw-bold">Add Products</span>
-                            </a>
+                    <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&q=80&w=400"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; border-bottom: 1px solid var(--border);"
+                        alt="Product">
+                    <div style="padding: 20px;">
+                        <span class="product-cat">Paints</span>
+                        <h4 style="margin-bottom: 15px;">Royal Talens Gouache</h4>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span class="price">$45.00</span>
+                            <button class="btn btn-primary btn-sm"><i class="bi bi-bag-plus"></i> Add</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
 
+    <!-- JS -->
     <script src="assets/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

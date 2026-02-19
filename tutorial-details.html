@@ -32,8 +32,10 @@
                 <a href="contact.html" class="nav-link">Contact</a>
                 <a href="dashboard.html" class="nav-link">Dashboard</a>
                 <div class="mobile-auth d-md-none w-100 mt-4 pt-4 border-top">
-                    <button onclick="openModal('loginModal')" class="btn btn-outline w-100 mb-3">Login</button>
-                    <button onclick="openModal('signupModal')" class="btn btn-primary w-100">Sign Up</button>
+                    <button onclick="window.location.href='login.html'"
+                        class="btn btn-outline w-100 mb-3">Login</button>
+                    <button onclick="window.location.href='register.html'" class="btn btn-primary w-100">Sign
+                        Up</button>
                 </div>
             </nav>
 
@@ -45,9 +47,10 @@
                     <span
                         style="position: absolute; top: -8px; right: -8px; background: var(--accent); color: white; width: 18px; height: 18px; border-radius: 50%; font-size: 0.7rem; display: flex; align-items: center; justify-content: center;">2</span>
                 </a>
-                <button onclick="openModal('loginModal')"
+                <button onclick="window.location.href='login.html'"
                     class="btn btn-outline btn-sm d-none d-md-inline-block">Login</button>
-                <button onclick="openModal('signupModal')" class="btn btn-primary btn-sm d-none d-md-inline-block">Sign
+                <button onclick="window.location.href='register.html'"
+                    class="btn btn-primary btn-sm d-none d-md-inline-block">Sign
                     Up</button>
 
                 <div class="mobile-toggle"><i class="bi bi-list"></i></div>
@@ -97,7 +100,7 @@
                                     <img src="https://placehold.co/60x60/e2e8f0/64748b?text=Paint"
                                         class="rounded border" alt="Tool">
                                     <div>
-                                        <h6 class="mb-0 fw-bold fs-6"><a href="../product.html" class="text-heading">Oil
+                                        <h6 class="mb-0 fw-bold fs-6"><a href="shop.html" class="text-heading">Oil
                                                 Paint Set</a></h6>
                                         <small class="text-primary fw-bold">$24.99</small>
                                     </div>
@@ -109,7 +112,7 @@
                                     <img src="https://placehold.co/60x60/e2e8f0/64748b?text=Brush"
                                         class="rounded border" alt="Tool">
                                     <div>
-                                        <h6 class="mb-0 fw-bold fs-6"><a href="../product.html" class="text-heading">Hog
+                                        <h6 class="mb-0 fw-bold fs-6"><a href="shop.html" class="text-heading">Hog
                                                 Bristle Brushes</a></h6>
                                         <small class="text-primary fw-bold">$18.50</small>
                                     </div>
@@ -118,7 +121,8 @@
                                 </div>
                             </div>
                             <hr class="my-4 opacity-10">
-                            <button class="btn btn-primary-creative w-100 btn-sm">Add All to Cart ($43.49)</button>
+                            <button onclick="window.location.href='checkout.html'"
+                                class="btn btn-primary-creative w-100 btn-sm">Add All to Cart ($43.49)</button>
                         </div>
                     </div>
                 </div>
@@ -126,62 +130,63 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-surface pt-5 border-top" style="border-color: var(--border-color) !important;">
-        <div class="container pb-5">
-            <div class="row g-5">
-                <div class="col-lg-4">
-                    <a class="d-flex align-items-center gap-2 mb-3" href="index.html">
-                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-                            style="width: 32px; height: 32px;">
-                            <i class="bi bi-palette-fill small"></i>
-                        </div>
-                        <span class="font-heading fs-5 fw-bold">Palette</span>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon"><i class="bi bi-palette-fill"></i></div>
+                        <span>Palette</span>
                     </a>
-                    <p class="text-muted small mb-4">The ultimate ecosystem for creators. Shop supplies, learn from
-                        pros, and share your work.</p>
-                    <div class="d-flex gap-2">
-                        <a href="#" class="btn btn-sm btn-outline-creative rounded-circle"
-                            style="width:36px;height:36px;padding:0;display:flex;align-items:center;justify-content:center;"><i
-                                class="bi bi-instagram"></i></a>
-                        <a href="#" class="btn btn-sm btn-outline-creative rounded-circle"
-                            style="width:36px;height:36px;padding:0;display:flex;align-items:center;justify-content:center;"><i
-                                class="bi bi-twitter"></i></a>
-                        <a href="#" class="btn btn-sm btn-outline-creative rounded-circle"
-                            style="width:36px;height:36px;padding:0;display:flex;align-items:center;justify-content:center;"><i
-                                class="bi bi-youtube"></i></a>
+                    <p class="footer-desc">Premium art supplies for the modern creator. Bridge the gap between
+                        inspiration and masterpiece.</p>
+                    <div class="socials">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
-                <div class="col-6 col-lg-2">
-                    <h6 class="fw-bold mb-3">Shop</h6>
-                    <ul class="list-unstyled d-flex flex-column gap-2 small">
-                        <li><a href="#" class="text-muted">Paints</a></li>
-                        <li><a href="#" class="text-muted">Brushes</a></li>
-                        <li><a href="#" class="text-muted">Canvases</a></li>
-                        <li><a href="#" class="text-muted">Digital</a></li>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="artists.html">Artists</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-6 col-lg-2">
-                    <h6 class="fw-bold mb-3">Academy</h6>
-                    <ul class="list-unstyled d-flex flex-column gap-2 small">
-                        <li><a href="#" class="text-muted">All Courses</a></li>
-                        <li><a href="#" class="text-muted">Mentorship</a></li>
-                        <li><a href="#" class="text-muted">Become an Instructor</a></li>
+                <div>
+                    <h4 class="footer-title">Shop Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Oil Painting</a></li>
+                        <li><a href="#">Watercolor</a></li>
+                        <li><a href="#">Sketching</a></li>
+                        <li><a href="#">Digital Art</a></li>
+                        <li><a href="#">Canvas & Paper</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
-                    <h6 class="fw-bold mb-3">Stay Inspired</h6>
-                    <p class="text-muted small">Join our newsletter for weekly tips.</p>
-                    <form class="d-flex gap-2">
-                        <input type="email" class="form-control" placeholder="Email address">
-                        <button class="btn btn-primary-creative">Join</button>
-                    </form>
+                <div>
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-geo-alt me-2"></i> 123 Art Lane, Creative City</li>
+                        <li><i class="bi bi-envelope me-2"></i> hello@palette.com</li>
+                        <li><i class="bi bi-telephone me-2"></i> +1 (555) 000-0000</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Palette Art Supplies E-Commerce. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
                 </div>
             </div>
         </div>
-        <div class="border-top py-4 text-center text-muted small" style="border-color: var(--border-color) !important;">
-            &copy; 2026 Palette Creative Ecosystem. All rights reserved.
-        </div>
     </footer>
+
+    <button class="back-to-top"><i class="bi bi-arrow-up"></i></button>
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

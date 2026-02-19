@@ -1,158 +1,91 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" dir="ltr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order History | Palette</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+    <title>Order History | Palette Art Supplies</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon"><i class="bi bi-palette-fill"></i></div>
-                <span>Palette</span>
-            </a>
 
-            <nav class="nav">
-                <a href="index.html" class="nav-link">Home 1</a>
-                <a href="home-2.html" class="nav-link">Home 2</a>
-                <a href="shop.html" class="nav-link">Shop</a>
-                <a href="tutorials.html" class="nav-link">Tutorials</a>
-                <a href="artists.html" class="nav-link">Artists</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <a href="dashboard.html" class="nav-link active">Dashboard</a>
-                <div class="mobile-profile d-md-none w-100 mt-4 pt-4 border-top">
-                    <div class="d-flex align-items-center gap-3 mb-4">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=40"
-                            alt="Avatar" style="width: 40px; height: 40px; border-radius: 50%;">
-                        <div>
-                            <div class="fw-bold">Mia Flores</div>
-                            <small class="text-muted">Pro Artist</small>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <div class="header-actions">
-                <button id="themeToggle" class="btn btn-outline btn-sm"><i class="bi bi-moon-stars"></i></button>
-                <a href="checkout.html" class="header-cart"
-                    style="position: relative; cursor: pointer; color: var(--text-heading); margin-right: 5px;">
-                    <i class="bi bi-bag fs-5"></i>
-                    <span
-                        style="position: absolute; top: -8px; right: -8px; background: var(--accent); color: white; width: 18px; height: 18px; border-radius: 50%; font-size: 0.7rem; display: flex; align-items: center; justify-content: center;">2</span>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" data-animate="fade-in">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><i class="bi bi-palette-fill"></i></div>
+                    <span>Palette</span>
                 </a>
-                <div class="d-none d-md-flex align-items-center gap-2 px-3 py-1 bg-surface border rounded-pill">
-                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=30"
-                        alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%;">
-                    <span style="font-weight: 600; font-size: 0.9rem;">Mia Flores</span>
-                    <i class="bi bi-chevron-down ms-1" style="font-size: 0.7rem;"></i>
-                </div>
-
-                <div class="mobile-toggle"><i class="bi bi-list"></i></div>
             </div>
-        </div>
-    </header>
+            <ul class="sidebar-nav">
+                <li><a href="dashboard.html" class="sidebar-link"><i class="bi bi-grid"></i> Overview</a></li>
+                <li><a href="dashboard-orders.html" class="sidebar-link active"><i class="bi bi-bag"></i> My Orders</a>
+                </li>
+                <li><a href="dashboard-wishlist.html" class="sidebar-link"><i class="bi bi-heart"></i> Wishlist</a></li>
+                <li><a href="dashboard-learning.html" class="sidebar-link"><i class="bi bi-play-circle"></i> My
+                        Tutorials</a></li>
+                <li><a href="dashboard-profile.html" class="sidebar-link"><i class="bi bi-person"></i> Profile
+                        Settings</a></li>
+                <li><a href="#" class="sidebar-link"><i class="bi bi-shield-lock"></i> Security</a></li>
+                <li style="margin-top: 40px;"><a href="index.html" class="sidebar-link" style="color: var(--accent);"><i
+                            class="bi bi-box-arrow-left"></i> Logout</a></li>
+            </ul>
+        </aside>
 
-    <div class="section-padding pt-5 mt-5">
-        <div class="container pt-4">
-            <div class="row g-5">
-                <!-- Sidebar -->
-                <div class="col-lg-3 d-none d-lg-block">
-                    <div class="card-creative p-4 border-0 shadow-sm bg-surface sticky-top" style="top: 100px;">
-                        <div class="text-center mb-4">
-                            <div class="position-relative d-inline-block mb-3">
-                                <img src="https://placehold.co/100x100/334155/fff?text=ME"
-                                    class="rounded-circle border border-4 border-surface shadow-sm">
-                            </div>
-                            <h5 class="font-heading fw-bold mb-1">Emily Painter</h5>
-                        </div>
-                        <div class="nav flex-column nav-pills gap-2">
-                            <a href="dashboard.html" class="nav-link d-flex align-items-center gap-3 text-muted">
-                                <i class="bi bi-grid"></i> Studio Overview
-                            </a>
-                            <a href="dashboard-learning.html"
-                                class="nav-link d-flex align-items-center gap-3 text-muted">
-                                <i class="bi bi-mortarboard"></i> My Learning
-                            </a>
-                            <a href="dashboard-wishlist.html"
-                                class="nav-link d-flex align-items-center gap-3 text-muted">
-                                <i class="bi bi-heart"></i> Wishlists
-                            </a>
-                            <a href="dashboard-orders.html"
-                                class="nav-link active d-flex align-items-center gap-3 fw-bold">
-                                <i class="bi bi-box-seam-fill"></i> Order History
-                            </a>
-                            <a href="dashboard-profile.html"
-                                class="nav-link d-flex align-items-center gap-3 text-muted">
-                                <i class="bi bi-person-gear"></i> Settings
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Main Content -->
-                <div class="col-lg-9">
-                    <h2 class="font-heading fw-bold mb-4">Order History</h2>
-
-                    <!-- Order 1 -->
-                    <div class="card-creative border-0 shadow-sm mb-4 p-4">
-                        <div class="d-flex justify-content-between align-items-start mb-4 border-bottom pb-3"
-                            style="border-color: var(--border-color) !important;">
-                            <div>
-                                <h5 class="fw-bold mb-1">Order #20495</h5>
-                                <small class="text-muted">Placed on Oct 24, 2026</small>
-                            </div>
-                            <div class="text-end">
-                                <span class="badge bg-success bg-opacity-10 text-success mb-1">Shipped</span>
-                                <a href="#" class="d-block small text-primary fw-bold">Track Order</a>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center gap-4">
-                            <img src="https://placehold.co/80x80/e2e8f0/64748b?text=Paints" class="rounded border">
-                            <img src="https://placehold.co/80x80/e2e8f0/64748b?text=Paper" class="rounded border">
-                            <div class="ms-auto">
-                                <small class="text-muted d-block">Total</small>
-                                <span class="fw-bold fs-5">$124.50</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Order 2 -->
-                    <div class="card-creative border-0 shadow-sm p-4">
-                        <div class="d-flex justify-content-between align-items-start mb-4 border-bottom pb-3"
-                            style="border-color: var(--border-color) !important;">
-                            <div>
-                                <h5 class="fw-bold mb-1">Order #19002</h5>
-                                <small class="text-muted">Placed on Sep 12, 2026</small>
-                            </div>
-                            <div class="text-end">
-                                <span class="badge bg-secondary bg-opacity-10 text-secondary mb-1">Delivered</span>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center gap-4">
-                            <img src="https://placehold.co/80x80/e2e8f0/64748b?text=Brushes" class="rounded border">
-                            <div class="ms-auto">
-                                <small class="text-muted d-block">Total</small>
-                                <span class="fw-bold fs-5">$45.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Main Content -->
+        <main class="main-content">
+            <div style="margin-bottom: 40px;" data-animate="fade-up">
+                <h1>Order History</h1>
+                <p class="text-muted">Review and track your art supply purchases.</p>
             </div>
-        </div>
+
+            <div class="card" data-animate="fade-up">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="text-align: left; border-bottom: 1px solid var(--border);">
+                            <th style="padding: 15px; color: var(--text-muted); font-size: 0.85rem;">ORDER ID</th>
+                            <th style="padding: 15px; color: var(--text-muted); font-size: 0.85rem;">DATE</th>
+                            <th style="padding: 15px; color: var(--text-muted); font-size: 0.85rem;">STATUS</th>
+                            <th style="padding: 15px; color: var(--text-muted); font-size: 0.85rem;">TOTAL</th>
+                            <th style="padding: 15px; color: var(--text-muted); font-size: 0.85rem;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 20px 15px; font-weight: 600;">#ORD-7392</td>
+                            <td style="padding: 20px 15px;">Aug 12, 2026</td>
+                            <td style="padding: 20px 15px;"><span
+                                    style="background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">Delivered</span>
+                            </td>
+                            <td style="padding: 20px 15px; font-weight: 700;">$145.00</td>
+                            <td style="padding: 20px 15px; text-align: right;"><a href="#"
+                                    class="btn btn-outline btn-sm">Details</a></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 20px 15px; font-weight: 600;">#ORD-7389</td>
+                            <td style="padding: 20px 15px;">Aug 10, 2026</td>
+                            <td style="padding: 20px 15px;"><span
+                                    style="background: rgba(14, 165, 233, 0.1); color: var(--secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">Processing</span>
+                            </td>
+                            <td style="padding: 20px 15px; font-weight: 700;">$32.50</td>
+                            <td style="padding: 20px 15px; text-align: right;"><a href="#"
+                                    class="btn btn-outline btn-sm">Details</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
     </div>
 
+    <!-- JS -->
     <script src="assets/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

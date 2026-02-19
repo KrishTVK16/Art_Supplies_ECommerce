@@ -234,9 +234,9 @@
     <!-- Tutorial Preview Section -->
     <section class="section" style="background: var(--bg-surface)">
         <div class="container grid grid-2">
-            <div data-animate="fade-up">
+            <div data-animate="fade-up" style="max-width: 480px; margin: 0 auto;">
                 <img src="https://images.pexels.com/photos/4139739/pexels-photo-4139739.jpeg" alt="Tutorial Preview"
-                    style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+                    style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); width: 100%;">
             </div>
             <div class="hero-content learn-content" data-animate="fade-up">
                 <span class="hero-tag">Learn with Us</span>
@@ -343,13 +343,15 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Palette Art Supplies E-Commerce. All rights reserved.</p>
-                <div style="display: flex; gap: 20px;">
+                <div class="footer-bottom-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <button class="back-to-top"><i class="bi bi-arrow-up"></i></button>
 
     <!-- Modals -->
     <div id="loginModal" class="modal">

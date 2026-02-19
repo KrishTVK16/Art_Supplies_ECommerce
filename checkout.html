@@ -31,8 +31,10 @@
                 <a href="contact.html" class="nav-link">Contact</a>
                 <a href="dashboard.html" class="nav-link">Dashboard</a>
                 <div class="mobile-auth d-md-none w-100 mt-4 pt-4 border-top">
-                    <button onclick="openModal('loginModal')" class="btn btn-outline w-100 mb-3">Login</button>
-                    <button onclick="openModal('signupModal')" class="btn btn-primary w-100">Sign Up</button>
+                    <button onclick="window.location.href='login.html'"
+                        class="btn btn-outline w-100 mb-3">Login</button>
+                    <button onclick="window.location.href='register.html'" class="btn btn-primary w-100">Sign
+                        Up</button>
                 </div>
             </nav>
 
@@ -44,9 +46,10 @@
                     <span
                         style="position: absolute; top: -8px; right: -8px; background: var(--accent); color: white; width: 18px; height: 18px; border-radius: 50%; font-size: 0.7rem; display: flex; align-items: center; justify-content: center;">2</span>
                 </a>
-                <button onclick="openModal('loginModal')"
+                <button onclick="window.location.href='login.html'"
                     class="btn btn-outline btn-sm d-none d-md-inline-block">Login</button>
-                <button onclick="openModal('signupModal')" class="btn btn-primary btn-sm d-none d-md-inline-block">Sign
+                <button onclick="window.location.href='register.html'"
+                    class="btn btn-primary btn-sm d-none d-md-inline-block">Sign
                     Up</button>
 
                 <div class="mobile-toggle"><i class="bi bi-list"></i></div>
@@ -122,7 +125,8 @@
                                         </div>
                                     </div>
                                     <div class="col-12 text-end mt-3">
-                                        <button type="button" class="btn btn-primary-creative">Place Order</button>
+                                        <button type="button" onclick="window.location.href='dashboard-orders.html'"
+                                            class="btn btn-primary-creative">Place Order</button>
                                     </div>
                                 </div>
                             </div>
@@ -145,7 +149,8 @@
                             <span>Total</span>
                             <span>$99.00</span>
                         </div>
-                        <button class="btn btn-primary-creative w-100">Pay Now</button>
+                        <button onclick="window.location.href='dashboard-orders.html'"
+                            class="btn btn-primary-creative w-100">Pay Now</button>
                     </div>
                 </div>
             </div>

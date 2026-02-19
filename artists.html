@@ -32,8 +32,10 @@
                 <a href="contact.html" class="nav-link">Contact</a>
                 <a href="dashboard.html" class="nav-link">Dashboard</a>
                 <div class="mobile-auth w-100 mt-4 pt-4 border-top">
-                    <button onclick="openModal('loginModal')" class="btn btn-outline w-100 mb-3">Login</button>
-                    <button onclick="openModal('signupModal')" class="btn btn-primary w-100">Sign Up</button>
+                    <button onclick="window.location.href='login.html'"
+                        class="btn btn-outline w-100 mb-3">Login</button>
+                    <button onclick="window.location.href='register.html'" class="btn btn-primary w-100">Sign
+                        Up</button>
                 </div>
             </nav>
 
@@ -45,8 +47,11 @@
                     <span
                         style="position: absolute; top: -8px; right: -8px; background: var(--accent); color: white; width: 18px; height: 18px; border-radius: 50%; font-size: 0.7rem; display: flex; align-items: center; justify-content: center;">2</span>
                 </a>
-                <button onclick="openModal('loginModal')" class="btn btn-outline btn-sm">Login</button>
-                <button onclick="openModal('signupModal')" class="btn btn-primary btn-sm">Sign Up</button>
+                <button onclick="window.location.href='login.html'"
+                    class="btn btn-outline btn-sm d-none d-md-inline-block">Login</button>
+                <button onclick="window.location.href='register.html'"
+                    class="btn btn-primary btn-sm d-none d-md-inline-block">Sign
+                    Up</button>
 
                 <div class="mobile-toggle"><i class="bi bi-list"></i></div>
             </div>
@@ -238,6 +243,12 @@
                     </a>
                     <p class="footer-desc">Premium art supplies for the modern creator. Bridge the gap between
                         inspiration and masterpiece.</p>
+                    <div class="socials">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    </div>
                 </div>
                 <div>
                     <h4 class="footer-title">Quick Links</h4>
@@ -250,17 +261,35 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-title">Community</h4>
+                    <h4 class="footer-title">Shop Categories</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Challenges</a></li>
-                        <li><a href="#">Forum</a></li>
-                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Oil Painting</a></li>
+                        <li><a href="#">Watercolor</a></li>
+                        <li><a href="#">Sketching</a></li>
+                        <li><a href="#">Digital Art</a></li>
+                        <li><a href="#">Canvas & Paper</a></li>
                     </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-geo-alt me-2"></i> 123 Art Lane, Creative City</li>
+                        <li><i class="bi bi-envelope me-2"></i> hello@palette.com</li>
+                        <li><i class="bi bi-telephone me-2"></i> +1 (555) 000-0000</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Palette Art Supplies E-Commerce. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <button class="back-to-top"><i class="bi bi-arrow-up"></i></button>
 
     <!-- JS -->
     <script src="assets/js/main.js"></script>
