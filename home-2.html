@@ -30,13 +30,24 @@
                 <a href="tutorials.html" class="nav-link">Tutorials</a>
                 <a href="artists.html" class="nav-link">Artists</a>
                 <a href="contact.html" class="nav-link">Contact</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <div class="mobile-auth w-100 mt-4 pt-4 border-top">
+                    <button onclick="openModal('loginModal')" class="btn btn-outline w-100 mb-3">Login</button>
+                    <button onclick="openModal('signupModal')" class="btn btn-primary w-100">Sign Up</button>
+                </div>
             </nav>
 
             <div class="header-actions">
                 <button id="themeToggle" class="btn btn-outline btn-sm"><i class="bi bi-moon-stars"></i></button>
+                <a href="checkout.html" class="header-cart"
+                    style="position: relative; cursor: pointer; color: var(--text-heading); margin-right: 5px;">
+                    <i class="bi bi-bag fs-5"></i>
+                    <span
+                        style="position: absolute; top: -8px; right: -8px; background: var(--accent); color: white; width: 18px; height: 18px; border-radius: 50%; font-size: 0.7rem; display: flex; align-items: center; justify-content: center;">2</span>
+                </a>
                 <button onclick="openModal('loginModal')" class="btn btn-outline btn-sm">Login</button>
                 <button onclick="openModal('signupModal')" class="btn btn-primary btn-sm">Sign Up</button>
-                <a href="dashboard.html" class="btn btn-primary btn-sm"><i class="bi bi-grid-fill"></i></a>
+
                 <div class="mobile-toggle"><i class="bi bi-list"></i></div>
             </div>
         </div>
@@ -97,8 +108,8 @@
                 </div>
                 <!-- Trending 3 -->
                 <div class="card product-card" data-animate="fade-up">
-                    <img src="https://images.unsplash.com/photo-1621506821199-a92558dd1cab?auto=format&fit=crop&q=80&w=400"
-                        alt="Trending" class="product-img">
+                    <img src="https://images.pexels.com/photos/1143511/pexels-photo-1143511.jpeg" alt="Trending"
+                        class="product-img">
                     <div class="product-info">
                         <span class="product-cat">Studio</span>
                         <h3 class="product-title">Professional Draughtsman Desk</h3>
@@ -116,28 +127,25 @@
     <section class="section" style="background: var(--bg-surface)">
         <div class="container">
             <div class="grid grid-3">
-                <div class="text-center" data-animate="fade-up">
-                    <div
-                        style="width: 80px; height: 80px; background: rgba(67, 56, 202, 0.1); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-                        <i class="bi bi-shield-check" style="font-size: 2.5rem; color: var(--primary);"></i>
+                <div class="card feature-card" data-animate="fade-up">
+                    <div class="feature-icon-wrapper">
+                        <i class="bi bi-shield-check"></i>
                     </div>
                     <h3>Quality Guaranteed</h3>
                     <p class="text-muted">Every product in our store is tested and approved by professional artists for
                         performance and longevity.</p>
                 </div>
-                <div class="text-center" data-animate="fade-up" style="transition-delay: 0.1s;">
-                    <div
-                        style="width: 80px; height: 80px; background: rgba(14, 165, 233, 0.1); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-                        <i class="bi bi-truck" style="font-size: 2.5rem; color: var(--secondary);"></i>
+                <div class="card feature-card" data-animate="fade-up" style="transition-delay: 0.1s;">
+                    <div class="feature-icon-wrapper feature-secondary">
+                        <i class="bi bi-truck"></i>
                     </div>
                     <h3>Global Shipping</h3>
                     <p class="text-muted">We deliver your creative tools to over 150 countries with tracked and insured
                         express shipping options.</p>
                 </div>
-                <div class="text-center" data-animate="fade-up" style="transition-delay: 0.2s;">
-                    <div
-                        style="width: 80px; height: 80px; background: rgba(251, 113, 133, 0.1); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-                        <i class="bi bi-heart" style="font-size: 2.5rem; color: var(--accent);"></i>
+                <div class="card feature-card" data-animate="fade-up" style="transition-delay: 0.2s;">
+                    <div class="feature-icon-wrapper feature-accent">
+                        <i class="bi bi-heart"></i>
                     </div>
                     <h3>Artist Community</h3>
                     <p class="text-muted">Join a network of creators. Share your work, get critiques, and find permanent
@@ -187,7 +195,7 @@
             </div>
 
             <div class="grid grid-3">
-                <div class="card" data-animate="fade-up">
+                <div class="card testimonial-card" data-animate="fade-up">
                     <div style="display: flex; gap: 5px; margin-bottom: 20px; color: var(--warning);">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                             class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -204,7 +212,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card" data-animate="fade-up" style="transition-delay: 0.1s;">
+                <div class="card testimonial-card" data-animate="fade-up" style="transition-delay: 0.1s;">
                     <div style="display: flex; gap: 5px; margin-bottom: 20px; color: var(--warning);">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                             class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -221,7 +229,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card" data-animate="fade-up" style="transition-delay: 0.2s;">
+                <div class="card testimonial-card" data-animate="fade-up" style="transition-delay: 0.2s;">
                     <div style="display: flex; gap: 5px; margin-bottom: 20px; color: var(--warning);">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                             class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -263,10 +271,10 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div>
-                    <a href="index.html" class="logo footer-logo">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo footer-logo-centered">
                         <div class="logo-icon"><i class="bi bi-palette-fill"></i></div>
-                        <span>Palette</span>
+                        <span class="logo-text">Palette</span>
                     </a>
                     <p class="footer-desc">Premium art supplies for the modern creator. Bridge the gap between
                         inspiration and masterpiece.</p>

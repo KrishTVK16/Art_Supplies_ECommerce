@@ -30,17 +30,24 @@
                 <a href="tutorials.html" class="nav-link">Tutorials</a>
                 <a href="artists.html" class="nav-link">Artists</a>
                 <a href="contact.html" class="nav-link">Contact</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <div class="mobile-auth w-100 mt-4 pt-4 border-top">
+                    <button onclick="openModal('loginModal')" class="btn btn-outline w-100 mb-3">Login</button>
+                    <button onclick="openModal('signupModal')" class="btn btn-primary w-100">Sign Up</button>
+                </div>
             </nav>
 
             <div class="header-actions">
                 <button id="themeToggle" class="btn btn-outline btn-sm"><i class="bi bi-moon-stars"></i></button>
-                <div class="header-cart" style="position: relative; cursor: pointer;">
+                <a href="checkout.html" class="header-cart"
+                    style="position: relative; cursor: pointer; color: var(--text-heading); margin-right: 5px;">
                     <i class="bi bi-bag fs-5"></i>
                     <span
                         style="position: absolute; top: -8px; right: -8px; background: var(--accent); color: white; width: 18px; height: 18px; border-radius: 50%; font-size: 0.7rem; display: flex; align-items: center; justify-content: center;">2</span>
-                </div>
+                </a>
                 <button onclick="openModal('loginModal')" class="btn btn-outline btn-sm">Login</button>
-                <a href="dashboard.html" class="btn btn-primary btn-sm"><i class="bi bi-grid-fill"></i></a>
+                <button onclick="openModal('signupModal')" class="btn btn-primary btn-sm">Sign Up</button>
+
                 <div class="mobile-toggle"><i class="bi bi-list"></i></div>
             </div>
         </div>
@@ -229,13 +236,13 @@
     <section class="section" style="background: #0f172a; color: white;">
         <div class="container">
             <div class="grid grid-2" style="align-items: center;">
-                <div data-animate="fade-up">
+                <div class="text-center" data-animate="fade-up" style="flex: 1;">
                     <span class="hero-tag" style="background: rgba(251, 113, 133, 0.2); color: var(--accent);">Limited
                         Time Offer</span>
                     <h2 style="color: white; font-size: 3rem; margin-bottom: 20px;">Summer Studio Sale</h2>
                     <p style="font-size: 1.2rem; opacity: 0.8; margin-bottom: 40px;">Upgrade your workspace with 30% off
                         all easels and drafting tables. Offer ends August 31st.</p>
-                    <div style="display: flex; gap: 30px; margin-bottom: 40px;">
+                    <div class="d-flex justify-content-center" style="gap: 30px; margin-bottom: 40px;">
                         <div>
                             <h3 style="color: white; font-size: 2rem;">12</h3>
                             <p style="font-size: 0.8rem; opacity: 0.6;">DAYS</p>

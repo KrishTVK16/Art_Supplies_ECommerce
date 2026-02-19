@@ -30,12 +30,24 @@
                 <a href="tutorials.html" class="nav-link">Tutorials</a>
                 <a href="artists.html" class="nav-link">Artists</a>
                 <a href="contact.html" class="nav-link active">Contact</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <div class="mobile-auth w-100 mt-4 pt-4 border-top">
+                    <button onclick="openModal('loginModal')" class="btn btn-outline w-100 mb-3">Login</button>
+                    <button onclick="openModal('signupModal')" class="btn btn-primary w-100">Sign Up</button>
+                </div>
             </nav>
 
             <div class="header-actions">
                 <button id="themeToggle" class="btn btn-outline btn-sm"><i class="bi bi-moon-stars"></i></button>
+                <a href="checkout.html" class="header-cart"
+                    style="position: relative; cursor: pointer; color: var(--text-heading); margin-right: 5px;">
+                    <i class="bi bi-bag fs-5"></i>
+                    <span
+                        style="position: absolute; top: -8px; right: -8px; background: var(--accent); color: white; width: 18px; height: 18px; border-radius: 50%; font-size: 0.7rem; display: flex; align-items: center; justify-content: center;">2</span>
+                </a>
                 <button onclick="openModal('loginModal')" class="btn btn-outline btn-sm">Login</button>
-                <a href="dashboard.html" class="btn btn-primary btn-sm"><i class="bi bi-grid-fill"></i></a>
+                <button onclick="openModal('signupModal')" class="btn btn-primary btn-sm">Sign Up</button>
+
                 <div class="mobile-toggle"><i class="bi bi-list"></i></div>
             </div>
         </div>
@@ -137,7 +149,9 @@
                                 <label class="form-label">Your Message</label>
                                 <textarea class="form-control" rows="6" placeholder="How can we help you?"></textarea>
                             </div>
-                            <button class="btn btn-primary btn-lg w-100">Send Message</button>
+                            <div class="text-center">
+                                <button class="btn btn-primary btn-lg" style="min-width: 200px;">Send Message</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -145,16 +159,13 @@
         </div>
     </section>
 
-    <!-- Map Section (Placeholder) -->
+    <!-- Map Section -->
     <section class="section" style="padding: 0;">
-        <div style="width: 100%; height: 450px; background: #e2e8f0; position: relative; overflow: hidden;">
-            <div
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=1500') center/cover; filter: grayscale(1);">
-            </div>
-            <div
-                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; border: 4px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.3);">
-                <i class="bi bi-geo-alt-fill"></i>
-            </div>
+        <div style="width: 100%; height: 450px; position: relative; overflow: hidden;">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15761.352467140833!2d-122.42841453268482!3d37.7711467554972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809e53a3ae97%3A0xb39d257271e6261c!2sSOMA%2C%20San%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
         </div>
     </section>
 

@@ -30,12 +30,24 @@
                 <a href="tutorials.html" class="nav-link">Tutorials</a>
                 <a href="artists.html" class="nav-link active">Artists</a>
                 <a href="contact.html" class="nav-link">Contact</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <div class="mobile-auth w-100 mt-4 pt-4 border-top">
+                    <button onclick="openModal('loginModal')" class="btn btn-outline w-100 mb-3">Login</button>
+                    <button onclick="openModal('signupModal')" class="btn btn-primary w-100">Sign Up</button>
+                </div>
             </nav>
 
             <div class="header-actions">
                 <button id="themeToggle" class="btn btn-outline btn-sm"><i class="bi bi-moon-stars"></i></button>
+                <a href="checkout.html" class="header-cart"
+                    style="position: relative; cursor: pointer; color: var(--text-heading); margin-right: 5px;">
+                    <i class="bi bi-bag fs-5"></i>
+                    <span
+                        style="position: absolute; top: -8px; right: -8px; background: var(--accent); color: white; width: 18px; height: 18px; border-radius: 50%; font-size: 0.7rem; display: flex; align-items: center; justify-content: center;">2</span>
+                </a>
                 <button onclick="openModal('loginModal')" class="btn btn-outline btn-sm">Login</button>
-                <a href="dashboard.html" class="btn btn-primary btn-sm"><i class="bi bi-grid-fill"></i></a>
+                <button onclick="openModal('signupModal')" class="btn btn-primary btn-sm">Sign Up</button>
+
                 <div class="mobile-toggle"><i class="bi bi-list"></i></div>
             </div>
         </div>
@@ -181,35 +193,33 @@
     <!-- Collaboration Section -->
     <section class="section">
         <div class="container">
-            <div class="card"
-                style="background: var(--text-heading); color: white; display: flex; flex-direction: row; align-items: center; gap: 60px; padding: 60px;"
-                data-animate="fade-up">
+            <div class="card collaboration-card" data-animate="fade-up">
                 <div style="flex: 1;">
-                    <h2 style="color: white; font-size: 2.5rem; margin-bottom: 20px;">Collaboration & Residencies</h2>
+                    <h2>Collaboration & Residencies</h2>
                     <p style="opacity: 0.8; margin-bottom: 30px;">Are you a professional artist looking to collaborate
                         on a product line or host a workshop? We're always looking for new perspectives.</p>
-                    <button class="btn btn-primary" style="background: white; color: var(--text-heading);">Get in
+                    <button class="btn btn-primary" style="background: white; color: var(--primary-dark);">Get in
                         Touch</button>
                 </div>
                 <div style="flex: 1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
                     <div
                         style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: center;">
-                        <h4 style="color: white;">Residencies</h4>
+                        <h4>Residencies</h4>
                         <p style="font-size: 0.8rem; opacity: 0.7;">3-month studio space</p>
                     </div>
                     <div
                         style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: center;">
-                        <h4 style="color: white;">Product Lines</h4>
+                        <h4>Product Lines</h4>
                         <p style="font-size: 0.8rem; opacity: 0.7;">Co-branded collections</p>
                     </div>
                     <div
                         style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: center;">
-                        <h4 style="color: white;">Workshops</h4>
+                        <h4>Workshops</h4>
                         <p style="font-size: 0.8rem; opacity: 0.7;">Digital & Physical</p>
                     </div>
                     <div
                         style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: center;">
-                        <h4 style="color: white;">Grants</h4>
+                        <h4>Grants</h4>
                         <p style="font-size: 0.8rem; opacity: 0.7;">Material sponsorships</p>
                     </div>
                 </div>

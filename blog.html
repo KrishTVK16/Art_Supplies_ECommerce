@@ -14,77 +14,45 @@
 </head>
 
 <body>
-    <!-- Header (Shared) -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-glass">
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-            <!-- Left: Brand -->
-            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-                    style="width: 40px; height: 40px;">
-                    <i class="bi bi-palette-fill fs-5"></i>
-                </div>
-                <span class="font-heading fs-4 fw-bold">Palette</span>
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="bi bi-palette-fill"></i></div>
+                <span>Palette</span>
             </a>
 
-            <!-- Right: Utility & Toggle -->
-            <div class="d-flex align-items-center gap-3 order-lg-3">
-                <!-- Theme Toggle -->
-                <button class="theme-toggle-btn"><i class="bi bi-moon-fill"></i></button>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home 1</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="tutorials.html" class="nav-link">Tutorials</a>
+                <a href="artists.html" class="nav-link">Artists</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <div class="mobile-auth d-md-none w-100 mt-4 pt-4 border-top">
+                    <button onclick="openModal('loginModal')" class="btn btn-outline w-100 mb-3">Login</button>
+                    <button onclick="openModal('signupModal')" class="btn btn-primary w-100">Sign Up</button>
+                </div>
+            </nav>
 
-                <!-- Cart -->
-                <a href="cart.html" class="position-relative text-heading fs-5">
-                    <i class="bi bi-bag"></i>
+            <div class="header-actions">
+                <button id="themeToggle" class="btn btn-outline btn-sm"><i class="bi bi-moon-stars"></i></button>
+                <a href="checkout.html" class="header-cart"
+                    style="position: relative; cursor: pointer; color: var(--text-heading); margin-right: 5px;">
+                    <i class="bi bi-bag fs-5"></i>
                     <span
-                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-light p-1"
-                        style="font-size: 0.5rem;">2</span>
+                        style="position: absolute; top: -8px; right: -8px; background: var(--accent); color: white; width: 18px; height: 18px; border-radius: 50%; font-size: 0.7rem; display: flex; align-items: center; justify-content: center;">2</span>
                 </a>
+                <button onclick="openModal('loginModal')"
+                    class="btn btn-outline btn-sm d-none d-md-inline-block">Login</button>
+                <button onclick="openModal('signupModal')" class="btn btn-primary btn-sm d-none d-md-inline-block">Sign
+                    Up</button>
 
-                <!-- Desktop Actions -->
-                <div class="d-none d-md-flex gap-2">
-                    <a href="login.html" class="btn btn-outline-creative btn-sm">Log In</a>
-                    <a href="register.html" class="btn btn-primary-creative btn-sm">Sign Up</a>
-                    <a href="dashboard.html" class="btn btn-outline-creative btn-sm"><i
-                            class="bi bi-person-circle"></i></a>
-                </div>
-
-                <!-- Mobile Toggler -->
-                <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-
-            <!-- Center: Navigation (Offcanvas on Mobile) -->
-            <div class="offcanvas offcanvas-start" id="offcanvasNavbar">
-                <div class="offcanvas-header border-bottom">
-                    <h5 class="offcanvas-title font-heading fw-bold">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <!-- Mobile: Dashboard First -->
-                    <div class="d-md-none mb-4">
-                        <a href="dashboard.html" class="btn btn-primary-creative w-100 mb-2">
-                            <i class="bi bi-grid-fill me-2"></i>My Dashboard
-                        </a>
-                    </div>
-
-                    <!-- Main Links -->
-                    <ul class="navbar-nav mx-auto fw-medium">
-                        <li class="nav-item"><a class="nav-link" href="shop.html">Store</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tutorials.html">Academy</a></li>
-                        <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
-                    </ul>
-
-                    <!-- Mobile: Auth -->
-                    <div class="d-md-none mt-4 d-flex flex-column gap-2">
-                        <a href="login.html" class="btn btn-outline-creative w-100">Log In</a>
-                        <a href="register.html" class="btn btn-primary-creative w-100">Sign Up</a>
-                    </div>
-                </div>
+                <div class="mobile-toggle"><i class="bi bi-list"></i></div>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Content -->
     <section class="section-padding pt-5 mt-5">
@@ -120,4 +88,3 @@
 </body>
 
 </html>
-

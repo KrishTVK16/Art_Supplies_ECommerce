@@ -240,6 +240,232 @@ textarea {
     font-size: 0.85rem;
 }
 
+/* --- Utilities & Helper Classes --- */
+.text-center {
+    text-align: center !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.flex-column {
+    flex-direction: column !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+/* --- UI Fixes --- */
+
+/* Hero Buttons */
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .hero-btns {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* Category Cards */
+.card.text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.card.text-center i {
+    margin-bottom: 15px !important;
+}
+
+/* Learn With Us Section */
+.learn-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Default for desktop side-by-side */
+    justify-content: center;
+}
+
+.learn-content.text-center,
+.learn-content {
+    /* Centering as requested */
+    align-items: center;
+    text-align: center;
+}
+
+.learn-content h2 {
+    margin: 15px 0 20px;
+}
+
+.learn-content .btn {
+    margin-top: 20px;
+}
+
+.learn-content .features {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Newsletter section */
+.newsletter-form {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form .btn {
+        width: 100%;
+    }
+}
+
+/* Feature Cards */
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 30px;
+    height: 100%;
+}
+
+.feature-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: rgba(67, 56, 202, 0.1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.feature-icon-wrapper i {
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.feature-secondary {
+    background: rgba(14, 165, 233, 0.1);
+}
+
+.feature-secondary i {
+    color: var(--secondary);
+}
+
+.feature-accent {
+    background: rgba(251, 113, 133, 0.1);
+}
+
+.feature-accent i {
+    color: var(--accent);
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+}
+
+/* Centered Footer Logo */
+.footer-logo-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 25px;
+    gap: 15px !important;
+}
+
+.footer-logo-centered .logo-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+}
+
+.footer-logo-centered .logo-text {
+    font-size: 1.8rem;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Testimonial Card Centering */
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.testimonial-card div[style*="display: flex"] {
+    justify-content: center !important;
+}
+
+.testimonial-card .text-muted {
+    margin-bottom: 25px;
+}
+
+.testimonial-card>div:last-child {
+    flex-direction: column !important;
+    text-align: center;
+}
+
+.testimonial-card img {
+    margin-bottom: 10px;
+}
+
+/* Collaboration Card Fix */
+.collaboration-card {
+    background: var(--primary-dark);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    padding: 60px;
+}
+
+[data-theme="dark"] .collaboration-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+}
+
+.collaboration-card h2,
+.collaboration-card h4 {
+    color: white !important;
+}
+
+[data-theme="dark"] .collaboration-card h2,
+[data-theme="dark"] .collaboration-card h4 {
+    color: var(--text-heading) !important;
+}
+
 /* --- Header --- */
 .header {
     position: fixed;
@@ -301,6 +527,8 @@ textarea {
     font-size: 0.95rem;
     position: relative;
     padding: 5px 0;
+    white-space: nowrap;
+    transition: var(--transition);
 }
 
 .nav-link:hover,
@@ -328,6 +556,11 @@ textarea {
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+.mobile-auth,
+.mobile-profile {
+    display: none;
 }
 
 /* Mobile Nav */
@@ -366,8 +599,13 @@ textarea {
         z-index: 1001;
     }
 
-    .header-actions {
-        z-index: 1001;
+    .header-actions .btn-sm:not(#themeToggle) {
+        display: none;
+    }
+
+    .mobile-auth,
+    .mobile-profile {
+        display: block;
     }
 }
 
@@ -739,11 +977,45 @@ textarea {
     background: var(--input-bg);
     border: 1px solid var(--border);
     transition: var(--transition);
+    color: var(--text-main);
+}
+
+.form-control:hover {
+    border-color: var(--primary-light);
 }
 
 .form-control:focus {
     border-color: var(--primary);
     background: var(--bg-surface);
+}
+
+/* Dark Mode Form Controls */
+[data-theme="dark"] .form-control {
+    background-color: var(--input-bg);
+    color: var(--text-heading);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .form-control:hover,
+[data-theme="dark"] .form-control:focus {
+    background-color: var(--bg-surface);
+    border-color: var(--primary);
+}
+
+/* Specific fix for select dropdowns in dark mode */
+[data-theme="dark"] select.form-control {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23cbd5e1' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+[data-theme="dark"] .form-control option {
+    background-color: var(--bg-surface);
+    color: var(--text-main);
 }
 
 /* Multi-home Support */

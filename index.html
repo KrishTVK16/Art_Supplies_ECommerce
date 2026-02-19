@@ -30,13 +30,24 @@
                 <a href="tutorials.html" class="nav-link">Tutorials</a>
                 <a href="artists.html" class="nav-link">Artists</a>
                 <a href="contact.html" class="nav-link">Contact</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <div class="mobile-auth w-100 mt-4 pt-4 border-top">
+                    <button onclick="openModal('loginModal')" class="btn btn-outline w-100 mb-3">Login</button>
+                    <button onclick="openModal('signupModal')" class="btn btn-primary w-100">Sign Up</button>
+                </div>
             </nav>
 
             <div class="header-actions">
                 <button id="themeToggle" class="btn btn-outline btn-sm"><i class="bi bi-moon-stars"></i></button>
+                <a href="checkout.html" class="header-cart"
+                    style="position: relative; cursor: pointer; color: var(--text-heading); margin-right: 5px;">
+                    <i class="bi bi-bag fs-5"></i>
+                    <span
+                        style="position: absolute; top: -8px; right: -8px; background: var(--accent); color: white; width: 18px; height: 18px; border-radius: 50%; font-size: 0.7rem; display: flex; align-items: center; justify-content: center;">2</span>
+                </a>
                 <button onclick="openModal('loginModal')" class="btn btn-outline btn-sm">Login</button>
                 <button onclick="openModal('signupModal')" class="btn btn-primary btn-sm">Sign Up</button>
-                <a href="dashboard.html" class="btn btn-primary btn-sm"><i class="bi bi-grid-fill"></i></a>
+
                 <div class="mobile-toggle"><i class="bi bi-list"></i></div>
             </div>
         </div>
@@ -88,8 +99,8 @@
                 <!-- Card 2 -->
                 <div class="card product-card" data-animate="fade-up">
                     <div class="wishlist-btn"><i class="bi bi-heart-fill" style="color: var(--accent)"></i></div>
-                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=400"
-                        alt="Brushes" class="product-img">
+                    <img src="https://images.pexels.com/photos/545580/pexels-photo-545580.jpeg" alt="Brushes"
+                        class="product-img">
                     <div class="product-info">
                         <span class="product-cat">Brushes</span>
                         <h3 class="product-title">Sable Detailer Pro</h3>
@@ -102,8 +113,8 @@
                 <!-- Card 3 -->
                 <div class="card product-card" data-animate="fade-up">
                     <div class="wishlist-btn"><i class="bi bi-heart"></i></div>
-                    <img src="https://images.unsplash.com/photo-1520406596245-4add8679f291?auto=format&fit=crop&q=80&w=400"
-                        alt="Canvas" class="product-img">
+                    <img src="https://images.pexels.com/photos/254717/pexels-photo-254717.jpeg" alt="Canvas"
+                        class="product-img">
                     <div class="product-info">
                         <span class="product-cat">Canvas</span>
                         <h3 class="product-title">Linen Stretched 24x36</h3>
@@ -166,8 +177,8 @@
             <div class="grid grid-4">
                 <!-- Product 1 -->
                 <div class="card product-card" data-animate="fade-up">
-                    <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&q=80&w=300"
-                        alt="Product" class="product-img">
+                    <img src="https://images.pexels.com/photos/2471205/pexels-photo-2471205.jpeg" alt="Product"
+                        class="product-img">
                     <div class="product-info">
                         <span class="product-cat">Paints</span>
                         <h3 class="product-title">Heavy Body Acrylics</h3>
@@ -179,8 +190,8 @@
                 </div>
                 <!-- Product 2 -->
                 <div class="card product-card" data-animate="fade-up">
-                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=300"
-                        alt="Product" class="product-img">
+                    <img src="https://images.pexels.com/photos/2935006/pexels-photo-2935006.jpeg" alt="Product"
+                        class="product-img">
                     <div class="product-info">
                         <span class="product-cat">Sketching</span>
                         <h3 class="product-title">Graphite Pencil Set</h3>
@@ -192,8 +203,8 @@
                 </div>
                 <!-- Product 3 -->
                 <div class="card product-card" data-animate="fade-up">
-                    <img src="https://images.unsplash.com/photo-1520406596245-4add8679f291?auto=format&fit=crop&q=80&w=300"
-                        alt="Product" class="product-img">
+                    <img src="https://images.pexels.com/photos/4348205/pexels-photo-4348205.jpeg" alt="Product"
+                        class="product-img">
                     <div class="product-info">
                         <span class="product-cat">Paper</span>
                         <h3 class="product-title">Watercolor Paper Block</h3>
@@ -205,8 +216,8 @@
                 </div>
                 <!-- Product 4 -->
                 <div class="card product-card" data-animate="fade-up">
-                    <img src="https://images.unsplash.com/photo-1515516089376-88db1e26e9c0?auto=format&fit=crop&q=80&w=300"
-                        alt="Product" class="product-img">
+                    <img src="https://images.pexels.com/photos/6932791/pexels-photo-6932791.jpeg" alt="Product"
+                        class="product-img">
                     <div class="product-info">
                         <span class="product-cat">Brushes</span>
                         <h3 class="product-title">Syntheic Fan Brush</h3>
@@ -224,10 +235,10 @@
     <section class="section" style="background: var(--bg-surface)">
         <div class="container grid grid-2">
             <div data-animate="fade-up">
-                <img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?auto=format&fit=crop&q=80&w=600"
-                    alt="Tutorial Preview" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+                <img src="https://images.pexels.com/photos/4139739/pexels-photo-4139739.jpeg" alt="Tutorial Preview"
+                    style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
             </div>
-            <div class="hero-content" data-animate="fade-up">
+            <div class="hero-content learn-content" data-animate="fade-up">
                 <span class="hero-tag">Learn with Us</span>
                 <h2>Master the Art of <br>Watercolor</h2>
                 <p>Join over 10,000 artists in our most popular tutorial series. From basic washes to complex
@@ -260,7 +271,7 @@
                 <h2 style="color: white; font-size: 2.5rem; margin-bottom: 20px;">Join the Global Artist Community</h2>
                 <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 40px;">Get weekly inspiration,
                     artist showcases, and exclusive discounts delivered straight to your inbox.</p>
-                <form class="d-flex" style="max-width: 500px; margin: 0 auto; gap: 10px;">
+                <form class="newsletter-form" style="max-width: 500px; margin: 0 auto;">
                     <input type="email" class="form-control" placeholder="Enter your email address" style="flex: 1;">
                     <button class="btn btn-accent">Subscribe</button>
                 </form>
